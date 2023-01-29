@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/mattress-shop/static/css/main.ff52e668.css",
+    "main.js": "/mattress-shop/static/js/main.525e4c15.js",
+    "static/media/item-2@2x.png": "/mattress-shop/static/media/item-2@2x.005053a8c0bb5f521972.png",
+    "static/media/item-3@2x.png": "/mattress-shop/static/media/item-3@2x.6b2ba401f34748c756c4.png",
+    "static/media/item-2.png": "/mattress-shop/static/media/item-2.800cb88d375aa60ab7d8.png",
+    "static/media/item-3.png": "/mattress-shop/static/media/item-3.aec456fda3c0331dd587.png",
+    "static/media/item-1@2x.png": "/mattress-shop/static/media/item-1@2x.7ae4acb2af5ea5742c25.png",
+    "static/media/item-1.png": "/mattress-shop/static/media/item-1.b8cfcd60f113b59d6b18.png",
+    "static/media/item-1@2x.jpg": "/mattress-shop/static/media/item-1@2x.2d59613d4f99b4b14777.jpg",
+    "static/media/item-1.jpg": "/mattress-shop/static/media/item-1.ca54b2984d057c056473.jpg",
+    "static/media/item-2@2x.jpg": "/mattress-shop/static/media/item-2@2x.d8fdd219e3a9903032c3.jpg",
+    "static/media/item-3@2x.jpg": "/mattress-shop/static/media/item-3@2x.e15023e4b8249f65d673.jpg",
+    "static/media/item-2.jpg": "/mattress-shop/static/media/item-2.174a7a6be782ba69d605.jpg",
+    "static/media/item-4@2x.jpg": "/mattress-shop/static/media/item-4@2x.5b85ebad6b2b25f6e178.jpg",
+    "static/media/item-3.jpg": "/mattress-shop/static/media/item-3.6937b80eb43dc551c710.jpg",
+    "static/media/slick.svg": "/mattress-shop/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/mattress-shop/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/mattress-shop/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/mattress-shop/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/mattress-shop/index.html",
+    "main.ff52e668.css.map": "/mattress-shop/static/css/main.ff52e668.css.map",
+    "main.525e4c15.js.map": "/mattress-shop/static/js/main.525e4c15.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff52e668.css",
+    "static/js/main.525e4c15.js"
+  ]
+}
