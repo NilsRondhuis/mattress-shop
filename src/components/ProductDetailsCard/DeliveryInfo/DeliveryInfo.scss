@@ -1,0 +1,28 @@
+.delivery-info {
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid var(--main-cl);
+  border-radius: var(--border-radius-shared);
+
+  .subhead {
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .list-info {
+    .item {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    .icon {
+      margin-right: 10px;
+      min-width: 21px;
+      min-height: 21px;
+    }
+  }
+}

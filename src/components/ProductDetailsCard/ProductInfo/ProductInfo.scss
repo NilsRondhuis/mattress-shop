@@ -1,0 +1,49 @@
+.product-info {
+  .options-box {
+    padding: 10px 5px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--main-cl);
+  }
+
+  .option-btn {
+    padding: 10px 20px;
+    font-weight: 700;
+    background-color: transparent;
+    border: none;
+
+    &.active {
+      color: var(--white-cl);
+      background-color: var(--link-cl);
+      box-shadow: var(--box-shadow-shared);
+      border-radius: var(--border-radius-shared);
+    }
+  }
+
+  .prodcut-about {
+    .text:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.product-characteristics {
+  .list-characteristics {
+    .item {
+      display: flex;
+      align-items: baseline;
+      gap: 5px;
+      font-size: 14px;
+
+      .heading {
+        font-weight: 700;
+      }
+
+      .design-line {
+        height: 1px;
+        flex-grow: 1;
+        border: 1px solid var(--main-cl);
+        opacity: 0.5;
+      }
+    }
+  }
+}

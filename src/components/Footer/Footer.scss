@@ -1,0 +1,21 @@
+.footer {
+  padding: 20px 0;
+  background-color: var(--black-cl);
+
+  .content-box {
+    padding: 10px 0;
+    width: 80%;
+    border-bottom: 1px solid var(--main-cl);
+  }
+
+  .time-work {
+    font-size: 18px;
+    text-align: center;
+    color: var(--white-cl);
+  }
+}
+.footer-flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

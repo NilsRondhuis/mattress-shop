@@ -1,0 +1,13 @@
+.slider-prev-arrow {
+  position: absolute;
+  right: 40px;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 40px;
+  background-color: var(--white-cl);
+  cursor: pointer;
+  z-index: 5;
+}

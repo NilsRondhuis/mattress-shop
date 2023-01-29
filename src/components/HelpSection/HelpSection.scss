@@ -1,0 +1,38 @@
+.help-card {
+  padding: 80px 20px 20px 20px;
+  height: 200px;
+  width: 100%;
+  background-color: green;
+  border-radius: var(--border-radius-shared);
+  background-image: linear-gradient(
+      90deg,
+      rgba(60, 60, 60, 0.3) 0%,
+      rgba(60, 60, 60, 0.3) 50%,
+      rgba(60, 60, 60, 0.3) 100%
+    ),
+    url(../../images/help/mobile/item-1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        90deg,
+        rgba(60, 60, 60, 0.3) 0%,
+        rgba(60, 60, 60, 0.3) 50%,
+        rgba(60, 60, 60, 0.3) 100%
+      ),
+      url(../../images/help/mobile/item-1@2x.jpg);
+  }
+
+  .title {
+    margin-bottom: 15px;
+    font-family: var(--second-title-font);
+    font-size: 21px;
+    line-height: 1;
+    font-weight: 700;
+    color: var(--white-cl);
+  }
+}

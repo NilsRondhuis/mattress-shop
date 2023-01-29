@@ -1,0 +1,22 @@
+.choosen-size {
+  margin-bottom: 10px;
+}
+
+.sizes-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.size-btn {
+  padding: 5px 10px;
+  background-color: transparent;
+  border: 1px solid var(--main-cl);
+  border-radius: var(--border-radius-shared);
+  transition: var(--transition-settings);
+
+  &.active {
+    border: 2px solid var(--link-cl);
+  }
+}

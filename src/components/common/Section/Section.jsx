@@ -1,18 +1,12 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import css from './Section.module.css';
+import PropTypes from "prop-types";
+import "./Section.scss";
 
-const Section = ({ title, children }) => {
-  return (
-    <section className={css.section}>
-      {title && <h2>{title}</h2>}
-      {children}
-    </section>
-  );
+const Section = ({ type, children }) => {
+  return <section className={type ? `${type}` : "section"}>{children}</section>;
 };
 
 Section.propTypes = {
-  title: PropTypes.string,
+  type: PropTypes.string,
   children: PropTypes.node.isRequired,
 };
 

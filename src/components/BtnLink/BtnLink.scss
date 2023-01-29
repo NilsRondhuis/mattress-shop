@@ -1,0 +1,11 @@
+.link {
+  display: inline-block;
+  padding: 10px 20px;
+  color: var(--white-cl);
+  background-color: var(--link-cl);
+  border-radius: var(--border-radius-shared);
+
+  &:active {
+    background-color: var(--active-link-cl);
+  }
+}

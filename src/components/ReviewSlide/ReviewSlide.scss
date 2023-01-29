@@ -1,0 +1,40 @@
+.review-slide {
+  padding: 20px;
+
+  .box {
+    position: relative;
+    padding: 15px;
+    border-radius: var(--border-radius-shared);
+    box-shadow: var(--box-shadow-shared);
+  }
+
+  .img-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .author-name {
+    font-family: var(--second-title-font);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--accent-cl);
+  }
+
+  .icon {
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    width: 23px;
+    height: 23px;
+    color: var(--black-cl);
+  }
+}
+
+.review-flex-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}

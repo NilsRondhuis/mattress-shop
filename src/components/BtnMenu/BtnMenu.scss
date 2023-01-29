@@ -1,0 +1,15 @@
+.menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  .cross,
+  .menu {
+    width: 26px;
+    height: 26px;
+  }
+}

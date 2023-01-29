@@ -1,0 +1,27 @@
+.additional-info {
+  margin-bottom: 40px;
+  padding: 10px;
+  border: 1px solid var(--main-cl);
+  border-radius: var(--border-radius-shared);
+
+  .subhead {
+    font-weight: 700;
+  }
+
+  .additional-list {
+    .item {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    .icon {
+      margin-right: 10px;
+      min-width: 21px;
+      min-height: 21px;
+    }
+  }
+}

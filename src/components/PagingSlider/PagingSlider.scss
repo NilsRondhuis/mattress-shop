@@ -1,0 +1,26 @@
+.paging {
+  width: 15px;
+  height: 15px;
+}
+
+.dots {
+  position: absolute;
+  top: 225px;
+  left: 20px;
+}
+
+.list-paging {
+  display: flex;
+  gap: 10px;
+
+  .item {
+    width: 15px;
+    height: 15px;
+    background-color: var(--main-cl);
+
+    &.slick-active {
+      background-color: var(--white-cl);
+      border: 3px solid var(--accent-cl);
+    }
+  }
+}

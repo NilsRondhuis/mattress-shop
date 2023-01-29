@@ -1,0 +1,13 @@
+.list-products {
+  display: flex;
+  flex-wrap: wrap;
+
+  .item {
+    flex-basis: calc((100% - 2 * 0px) / 2);
+    border-bottom: 1px solid var(--main-cl);
+
+    &:nth-child(odd) {
+      border-right: 1px solid var(--main-cl);
+    }
+  }
+}
