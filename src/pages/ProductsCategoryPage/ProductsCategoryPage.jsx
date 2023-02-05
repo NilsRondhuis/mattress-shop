@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 // import PropTypes from "prop-types";
-import { HiArrowNarrowLeft } from "react-icons/hi";
-import Section from "components/common/Section/Section";
-import Container from "components/common/Container/Container";
-import BtnLink from "components/BtnLink/BtnLink";
-import ProductCard from "components/ProductCard/ProductsCard";
-import "./ProductsCategoryPage.scss";
+import { HiArrowNarrowLeft } from 'react-icons/hi';
+import Section from 'components/common/Section/Section';
+import Container from 'components/common/Container/Container';
+import BtnLink from 'components/common/BtnLink/BtnLink';
+import ProductCard from 'components/ProductCard/ProductsCard';
+import './ProductsCategoryPage.scss';
 
 const ProductsCategoryPage = ({ products }) => {
   return (

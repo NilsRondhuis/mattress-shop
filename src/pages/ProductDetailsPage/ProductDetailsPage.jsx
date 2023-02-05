@@ -1,12 +1,12 @@
-import { useParams } from "react-router-dom";
-import PropTypes from "prop-types";
-import { HiArrowNarrowLeft } from "react-icons/hi";
-import Section from "components/common/Section/Section";
-import Container from "components/common/Container/Container";
-import BtnLink from "components/BtnLink/BtnLink";
-import ProductDetailsCard from "components/ProductDetailsCard/ProductDetailsCard";
-import "./ProductDetailsPage.scss";
-import ScrollToTop from "components/common/ScrollToTop/ScrollToTop";
+import { useParams } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { HiArrowNarrowLeft } from 'react-icons/hi';
+import Section from 'components/common/Section/Section';
+import Container from 'components/common/Container/Container';
+import BtnLink from 'components/common/BtnLink/BtnLink';
+import ProductDetailsCard from 'components/ProductDetailsCard/ProductDetailsCard';
+import './ProductDetailsPage.scss';
+import ScrollToTop from 'components/common/ScrollToTop/ScrollToTop';
 
 const ProductDetailsPage = ({ products }) => {
   const { productName } = useParams();

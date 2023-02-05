@@ -26,6 +26,7 @@
     justify-content: center;
     padding: 12px 20px;
     width: 100%;
+    font-weight: 600;
     color: var(--white-cl);
     background-color: var(--link-cl);
     border: none;
@@ -35,8 +36,15 @@
       background-color: var(--active-link-cl);
     }
 
+    &:disabled {
+      background-color: var(--disabled-link-cl);
+      color: var(--success-cl);
+    }
+
     .icon {
       margin-right: 10px;
+      width: 23px;
+      height: 23px;
     }
   }
 }

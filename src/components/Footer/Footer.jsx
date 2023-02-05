@@ -1,13 +1,13 @@
 // import PropTypes from "prop-types";
-import Address from "components/Address/Address";
-import Container from "components/common/Container/Container";
-import FlexContainer from "components/common/FlexContainer/FlexContainer";
-import Copy from "components/Copy/Copy";
-import Logo from "components/Logo/Logo";
-import Socials from "components/Socials/Socials";
-import "./Footer.scss";
+import Address from 'components/Address/Address';
+import Container from 'components/common/Container/Container';
+import FlexContainer from 'components/common/FlexContainer/FlexContainer';
+import Copy from 'components/Copy/Copy';
+import Logo from 'components/common/Logo/Logo';
+import Socials from 'components/common/Socials/Socials';
+import './Footer.scss';
 
-const Footer = (props) => {
+const Footer = props => {
   return (
     <footer className="footer">
       <Container>

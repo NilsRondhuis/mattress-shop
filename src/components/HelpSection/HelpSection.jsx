@@ -1,10 +1,10 @@
 // import PropTypes from "prop-types";
-import Section from "components/common/Section/Section";
-import Container from "components/common/Container/Container";
-import "./HelpSection.scss";
-import BtnLink from "components/BtnLink/BtnLink";
+import Section from 'components/common/Section/Section';
+import Container from 'components/common/Container/Container';
+import './HelpSection.scss';
+import BtnLink from 'components/common/BtnLink/BtnLink';
 
-const Help = (props) => {
+const Help = props => {
   return (
     <Section>
       <Container>

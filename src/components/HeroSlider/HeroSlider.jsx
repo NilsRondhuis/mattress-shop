@@ -1,11 +1,11 @@
-import Slider from "react-slick";
-import HeroSlide from "components/HeroSlide/HeroSlide";
-import NextArrow from "components/ArrowSlider/NextArrow/NextArrow";
-import PrevArrow from "components/ArrowSlider/PrevArrow/PrevArrow";
-import { Dots, PagingSlider } from "components/PagingSlider/PagingSlider";
-import heroConfig from "data/hero-config";
+import Slider from 'react-slick';
+import HeroSlide from 'components/HeroSlide/HeroSlide';
+import NextArrow from 'components/ArrowSlider/NextArrow/NextArrow';
+import PrevArrow from 'components/ArrowSlider/PrevArrow/PrevArrow';
+import { Dots, PagingSlider } from 'components/PagingSlider/PagingSlider';
+import heroConfig from 'data/hero-config';
 
-const HeroSlider = (props) => {
+const HeroSlider = props => {
   const settings = {
     dots: true,
     infinite: true,
@@ -14,7 +14,7 @@ const HeroSlider = (props) => {
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-    appendDots: (dots) => <Dots dots={dots} />,
+    appendDots: dots => <Dots dots={dots} />,
     customPaging: (i, onClick) => <PagingSlider onClick={onClick} />,
   };
   return (

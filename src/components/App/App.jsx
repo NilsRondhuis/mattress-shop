@@ -6,8 +6,6 @@ import ProductDetailsPage from 'pages/ProductDetailsPage/ProductDetailsPage';
 import HelpPage from 'pages/HelpPage/HelpPage';
 import productsConfig from 'data/products-config';
 
-//App
-
 const App = () => {
   return (
     <>

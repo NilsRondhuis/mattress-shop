@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 // import PropTypes from "prop-types";
-import { HiArrowNarrowLeft } from "react-icons/hi";
-import Section from "components/common/Section/Section";
-import Container from "components/common/Container/Container";
-import BtnLink from "components/BtnLink/BtnLink";
-import "./HelpPage.scss";
+import { HiArrowNarrowLeft } from 'react-icons/hi';
+import Section from 'components/common/Section/Section';
+import Container from 'components/common/Container/Container';
+import BtnLink from 'components/common/BtnLink/BtnLink';
+import './HelpPage.scss';
 
-const HelpPage = (props) => {
+const HelpPage = props => {
   return (
     <main>
       <Section>
