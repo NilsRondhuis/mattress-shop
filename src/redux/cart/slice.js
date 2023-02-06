@@ -10,7 +10,6 @@ const cartSlice = createSlice({
       state.items.push(action.payload);
     },
     incrementProductCart(state, action) {
-      console.log(action.payload);
       state.items.map(item => {
         if (item.id === action.payload.id) {
           item.quantity = item.quantity + action.payload.increment;
@@ -22,7 +21,6 @@ const cartSlice = createSlice({
       });
     },
     decrementProductCart(state, action) {
-      console.log(action.payload);
       state.items.map(item => {
         if (item.id === action.payload.id) {
           item.quantity = item.quantity - action.payload.increment;
