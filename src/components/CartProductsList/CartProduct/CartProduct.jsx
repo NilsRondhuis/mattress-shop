@@ -1,8 +1,7 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { deleteProductCart } from 'redux/cart/slice';
 import { Link } from 'react-router-dom';
+import { deleteProductCart } from 'redux/cart/slice';
 import { MdDeleteForever } from 'react-icons/md';
 import './CartProduct.scss';
 
@@ -20,6 +19,7 @@ const CartProduct = ({
   const handleDelete = productId => {
     dispatch(deleteProductCart(productId));
   };
+
   return (
     <div className="cart-product-card">
       <div className="box-content">
@@ -54,6 +54,15 @@ const CartProduct = ({
   );
 };
 
-CartProduct.propTypes = {};
+CartProduct.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  img1x: PropTypes.string.isRequired,
+  img2x: PropTypes.string.isRequired,
+  size: PropTypes.string.isRequired,
+  oldPrice: PropTypes.number.isRequired,
+  newPrice: PropTypes.number.isRequired,
+  onToggle: PropTypes.func.isRequired,
+};
 
 export default CartProduct;

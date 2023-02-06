@@ -1,6 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
-import "./ProductsCard.scss";
+import PropTypes from 'prop-types';
+import './ProductsCard.scss';
 
 const ProductCard = ({ name, img1x, img2x, oldPrice, newPrice, sale }) => {
   return (

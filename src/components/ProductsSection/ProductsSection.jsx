@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
-import Section from "components/common/Section/Section";
-import Container from "components/common/Container/Container";
-import ProductCard from "components/ProductCard/ProductsCard";
-import "./ProductsSection.scss";
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import Section from 'components/common/Section/Section';
+import Container from 'components/common/Container/Container';
+import ProductCard from 'components/ProductCard/ProductsCard';
+import './ProductsSection.scss';
 
 const ProductsSection = ({ products }) => {
   return (
@@ -34,7 +34,17 @@ const ProductsSection = ({ products }) => {
 };
 
 ProductsSection.propTypes = {
-  products: PropTypes.array.isRequired,
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      name: PropTypes.string,
+      img1x: PropTypes.string,
+      img2x: PropTypes.string,
+      oldPrice: PropTypes.number,
+      newPrice: PropTypes.number,
+      sale: PropTypes.bool,
+    })
+  ).isRequired,
 };
 
 export default ProductsSection;

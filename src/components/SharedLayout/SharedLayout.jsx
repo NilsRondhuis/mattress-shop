@@ -1,5 +1,5 @@
 // import PropTypes from "prop-types";
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { selectProductInCart } from 'redux/cart/selectors';
 import { Outlet } from 'react-router-dom';

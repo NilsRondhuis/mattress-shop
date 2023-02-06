@@ -1,8 +1,7 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { BsFillChatRightQuoteFill } from "react-icons/bs";
-import "./ReviewSlide.scss";
-import FlexContainer from "components/common/FlexContainer/FlexContainer";
+import PropTypes from 'prop-types';
+import FlexContainer from 'components/common/FlexContainer/FlexContainer';
+import { BsFillChatRightQuoteFill } from 'react-icons/bs';
+import './ReviewSlide.scss';
 
 const ReviewSlide = ({ img, img2x, name, text }) => {
   return (

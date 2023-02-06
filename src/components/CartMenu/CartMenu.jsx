@@ -1,12 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { BsSearch } from 'react-icons/bs';
+import CartProductsList from 'components/CartProductsList/CartProductsList';
 import BtnClose from 'components/common/BtnClose/BtnClose';
 import './CartMenu.scss';
-import { MdDeleteForever } from 'react-icons/md';
-import CartProductsList from 'components/CartProductsList/CartProductsList';
 
 const CartMenu = ({ isOpen, onToggle, productsCart }) => {
   return (

@@ -1,10 +1,10 @@
 // import PropTypes from "prop-types";
-import Section from "components/common/Section/Section";
-import Container from "components/common/Container/Container";
-import "./ReviewsSection.scss";
-import ReviewsSlider from "components/ReviewsSlider/ReviewsSlider";
+import Section from 'components/common/Section/Section';
+import Container from 'components/common/Container/Container';
+import ReviewsSlider from 'components/ReviewsSlider/ReviewsSlider';
+import './ReviewsSection.scss';
 
-const Reviews = (props) => {
+const Reviews = props => {
   return (
     <Section type="review-section">
       <Container>

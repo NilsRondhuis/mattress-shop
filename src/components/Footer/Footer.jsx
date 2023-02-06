@@ -2,9 +2,9 @@
 import Address from 'components/Address/Address';
 import Container from 'components/common/Container/Container';
 import FlexContainer from 'components/common/FlexContainer/FlexContainer';
-import Copy from 'components/Copy/Copy';
 import Logo from 'components/common/Logo/Logo';
 import Socials from 'components/common/Socials/Socials';
+import Copy from 'components/Copy/Copy';
 import './Footer.scss';
 
 const Footer = props => {

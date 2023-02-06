@@ -1,16 +1,16 @@
+import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
-import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectProductInCart } from 'redux/cart/selectors';
 import { addProductToCart } from 'redux/cart/slice';
-import { FaShoppingCart } from 'react-icons/fa';
-import './ProductDetailsCard.scss';
 import SizeOption from './SizeOption/SizeOption';
 import DeliveryInfo from './DeliveryInfo/DeliveryInfo';
 import AdditionalInfo from './AdditionalInfo/AdditionalInfo';
 import ProductInfo from './ProductInfo/ProductInfo';
 import { BsFillCartCheckFill } from 'react-icons/bs';
+import { FaShoppingCart } from 'react-icons/fa';
+import './ProductDetailsCard.scss';
 
 const ProductDetailsCard = ({ product }) => {
   const dispatch = useDispatch();

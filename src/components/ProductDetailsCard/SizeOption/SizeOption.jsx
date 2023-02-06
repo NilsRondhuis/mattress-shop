@@ -1,6 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
-import "./SizeOption.scss";
+import PropTypes from 'prop-types';
+import './SizeOption.scss';
 
 const SizeOption = ({ product, currentSize, onUpdateSize }) => {
   return (
@@ -11,7 +10,7 @@ const SizeOption = ({ product, currentSize, onUpdateSize }) => {
           <li key={idx} className="item">
             <button
               type="button"
-              className={currentSize === size ? "size-btn active" : "size-btn"}
+              className={currentSize === size ? 'size-btn active' : 'size-btn'}
               onClick={() => onUpdateSize(size)}
             >
               {size} см
@@ -28,6 +27,7 @@ SizeOption.propTypes = {
     sizes: PropTypes.arrayOf(PropTypes.string),
   }),
   currentSize: PropTypes.string.isRequired,
+  onUpdateSize: PropTypes.func.isRequired,
 };
 
 export default SizeOption;

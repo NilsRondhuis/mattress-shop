@@ -1,7 +1,6 @@
-import React from "react";
-import { BsWallet2 } from "react-icons/bs";
-import { CgFileDocument } from "react-icons/cg";
-import "./AdditionalInfo.scss";
+import { BsWallet2 } from 'react-icons/bs';
+import { CgFileDocument } from 'react-icons/cg';
+import './AdditionalInfo.scss';
 
 const AdditionalInfo = () => {
   return (

@@ -1,4 +1,3 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import BtnLink from 'components/common/BtnLink/BtnLink';
 import CartProduct from './CartProduct/CartProduct';
@@ -38,6 +37,19 @@ const CartProductsList = ({ productsCart, onToggle }) => {
   );
 };
 
-CartProductsList.propTypes = {};
+CartProductsList.propTypes = {
+  productsCart: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      name: PropTypes.string,
+      img1x: PropTypes.string,
+      img2x: PropTypes.string,
+      size: PropTypes.string,
+      oldPrice: PropTypes.number,
+      newPrice: PropTypes.number,
+    })
+  ).isRequired,
+  onToggle: PropTypes.func.isRequired,
+};
 
 export default CartProductsList;

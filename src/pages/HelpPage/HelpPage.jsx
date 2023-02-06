@@ -1,9 +1,8 @@
-import React from 'react';
 // import PropTypes from "prop-types";
-import { HiArrowNarrowLeft } from 'react-icons/hi';
 import Section from 'components/common/Section/Section';
 import Container from 'components/common/Container/Container';
 import BtnLink from 'components/common/BtnLink/BtnLink';
+import { HiArrowNarrowLeft } from 'react-icons/hi';
 import './HelpPage.scss';
 
 const HelpPage = props => {
