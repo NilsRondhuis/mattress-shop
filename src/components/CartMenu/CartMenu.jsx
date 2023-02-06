@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
-import { BsSearch } from 'react-icons/bs';
 import CartProductsList from 'components/CartProductsList/CartProductsList';
+import CartNoProduct from 'components/CartNoProduct/CartNoProduct';
 import BtnClose from 'components/common/BtnClose/BtnClose';
 import './CartMenu.scss';
 
@@ -17,11 +17,7 @@ const CartMenu = ({ isOpen, onToggle, productsCart }) => {
       {productsCart.length > 0 ? (
         <CartProductsList productsCart={productsCart} onToggle={onToggle} />
       ) : (
-        <div className="cart-no-product-container">
-          <p className="text">
-            У кошику немає товарів <BsSearch className="icon" />
-          </p>
-        </div>
+        <CartNoProduct text="У кошику немає товарів" />
       )}
     </div>
   );

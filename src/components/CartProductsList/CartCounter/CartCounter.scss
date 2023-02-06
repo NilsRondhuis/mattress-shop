@@ -8,6 +8,10 @@
     color: var(--white-cl);
     background-color: var(--link-cl);
     border: none;
+
+    &:disabled {
+      background-color: var(--disabled-link-cl);
+    }
   }
 
   .conter-value {

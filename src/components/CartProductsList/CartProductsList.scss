@@ -4,7 +4,7 @@
   .item {
     position: relative;
     padding-bottom: 10px;
-    border-bottom: 1px solid var(--main-cl);
+    border-bottom: 1px solid var(--design-line-cl);
 
     &:not(:last-child) {
       margin-bottom: 20px;
