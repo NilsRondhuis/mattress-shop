@@ -9,6 +9,30 @@ const cartSlice = createSlice({
     addProductToCart(state, action) {
       state.items.push(action.payload);
     },
+    incrementProductCart(state, action) {
+      console.log(action.payload);
+      state.items.map(item => {
+        if (item.id === action.payload.id) {
+          item.quantity = item.quantity + action.payload.increment;
+          item.oldPrice = item.oldPrice + item.initialCartPrice;
+          item.newPrice = item.newPrice + item.initialCartPrice;
+          return item;
+        }
+        return item;
+      });
+    },
+    decrementProductCart(state, action) {
+      console.log(action.payload);
+      state.items.map(item => {
+        if (item.id === action.payload.id) {
+          item.quantity = item.quantity - action.payload.increment;
+          item.oldPrice = item.oldPrice - item.initialCartPrice;
+          item.newPrice = item.newPrice - item.initialCartPrice;
+          return item;
+        }
+        return item;
+      });
+    },
     deleteProductCart(state, action) {
       const idx = state.items.findIndex(({ id }) => id === action.payload);
       state.items.splice(idx, 1);
@@ -26,4 +50,9 @@ export const persistedReducerCart = persistReducer(
   cartSlice.reducer
 );
 
-export const { addProductToCart, deleteProductCart } = cartSlice.actions;
+export const {
+  addProductToCart,
+  incrementProductCart,
+  decrementProductCart,
+  deleteProductCart,
+} = cartSlice.actions;

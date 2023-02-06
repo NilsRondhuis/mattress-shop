@@ -1,0 +1,17 @@
+.cart-counter {
+  padding: 10px 0;
+
+  .counter-btn {
+    display: inline-block;
+    padding: 7px 13px;
+    font-weight: 500;
+    color: var(--white-cl);
+    background-color: var(--link-cl);
+    border: none;
+  }
+
+  .conter-value {
+    display: inline-block;
+    padding: 0 10px;
+  }
+}

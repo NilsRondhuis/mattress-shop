@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { deleteProductCart } from 'redux/cart/slice';
+import CartCounter from '../CartCounter/CartCounter';
 import { MdDeleteForever } from 'react-icons/md';
 import './CartProduct.scss';
 
@@ -14,8 +15,10 @@ const CartProduct = ({
   oldPrice,
   newPrice,
   onToggle,
+  quantity,
 }) => {
   const dispatch = useDispatch();
+
   const handleDelete = productId => {
     dispatch(deleteProductCart(productId));
   };
@@ -30,6 +33,7 @@ const CartProduct = ({
             alt={`Ортопедичний матрац ${name}`}
           />
         </div>
+
         <div className="box-info">
           <Link
             to={`/products/${name}`}
@@ -41,6 +45,8 @@ const CartProduct = ({
           <span className="old-price">{oldPrice} грн.</span>
           <span className="new-price">{newPrice} грн.</span>
         </div>
+
+        <CartCounter id={id} quantity={quantity} />
       </div>
       <button
         type="button"
@@ -63,6 +69,7 @@ CartProduct.propTypes = {
   oldPrice: PropTypes.number.isRequired,
   newPrice: PropTypes.number.isRequired,
   onToggle: PropTypes.func.isRequired,
+  quantity: PropTypes.number.isRequired,
 };
 
 export default CartProduct;
