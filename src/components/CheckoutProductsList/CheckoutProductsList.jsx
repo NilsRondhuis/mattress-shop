@@ -1,9 +1,11 @@
+import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import BtnLink from 'components/common/BtnLink/BtnLink';
-import CartProduct from './CartProduct/CartProduct';
-import './CartProductsList.scss';
+import CheckoutProduct from './CheckoutProduct/CheckoutProduct';
+import './CheckoutProductsList.scss';
 
-const CartProductsList = ({ productsCart, onToggle }) => {
+const CheckoutProductsList = ({ productsCart, onToggle }) => {
+  const location = useLocation();
   const amount = productsCart.reduce((acc, item) => {
     acc += item.newPrice;
     return acc;
@@ -15,7 +17,7 @@ const CartProductsList = ({ productsCart, onToggle }) => {
         {productsCart.map(
           ({ id, name, img1x, img2x, size, oldPrice, newPrice, quantity }) => (
             <li key={id} className="item">
-              <CartProduct
+              <CheckoutProduct
                 id={id}
                 name={name}
                 img1x={img1x}
@@ -33,12 +35,17 @@ const CartProductsList = ({ productsCart, onToggle }) => {
       <p className="cart-amount">
         Всього разом: <span className="cart-price">{amount} грн.</span>
       </p>
-      <BtnLink to="/" type="cart-order-btn" text="Оформити замовлення" />
+      <BtnLink
+        to="/checkout"
+        type="cart-order-btn"
+        text="Оформити замовлення"
+        state={{ from: location }}
+      />
     </>
   );
 };
 
-CartProductsList.propTypes = {
+CheckoutProductsList.propTypes = {
   productsCart: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
@@ -53,4 +60,4 @@ CartProductsList.propTypes = {
   onToggle: PropTypes.func.isRequired,
 };
 
-export default CartProductsList;
+export default CheckoutProductsList;

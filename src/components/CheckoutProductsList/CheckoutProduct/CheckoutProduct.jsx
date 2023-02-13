@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { deleteProductCart } from 'redux/cart/slice';
-import CartCounter from '../CartCounter/CartCounter';
+import Counter from '../Counter/Counter';
 import { MdDeleteForever } from 'react-icons/md';
-import './CartProduct.scss';
+import './CheckoutProduct.scss';
 
-const CartProduct = ({
+const CheckoutProduct = ({
   id,
   name,
   img1x,
@@ -46,7 +46,7 @@ const CartProduct = ({
           <span className="new-price">{newPrice} грн.</span>
         </div>
 
-        <CartCounter id={id} quantity={quantity} />
+        <Counter id={id} quantity={quantity} />
       </div>
       <button
         type="button"
@@ -60,7 +60,7 @@ const CartProduct = ({
   );
 };
 
-CartProduct.propTypes = {
+CheckoutProduct.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   img1x: PropTypes.string.isRequired,
@@ -72,4 +72,4 @@ CartProduct.propTypes = {
   quantity: PropTypes.number.isRequired,
 };
 
-export default CartProduct;
+export default CheckoutProduct;

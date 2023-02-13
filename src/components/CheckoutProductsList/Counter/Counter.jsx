@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { incrementProductCart, decrementProductCart } from 'redux/cart/slice';
-import './CartCounter.scss';
+import './Counter.scss';
 
-const CartCounter = ({ id, quantity }) => {
+const Counter = ({ id, quantity }) => {
   const dispatch = useDispatch();
 
   const handleIncrement = productId => {
@@ -35,9 +35,9 @@ const CartCounter = ({ id, quantity }) => {
   );
 };
 
-CartCounter.propTypes = {
+Counter.propTypes = {
   id: PropTypes.string.isRequired,
   quantity: PropTypes.number.isRequired,
 };
 
-export default CartCounter;
+export default Counter;

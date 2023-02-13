@@ -1,4 +1,5 @@
 // import PropTypes from "prop-types";
+import { useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { selectProductInCart } from 'redux/cart/selectors';
@@ -14,9 +15,15 @@ import Footer from 'components/Footer/Footer';
 import './SharedLayout.scss';
 
 const SharedLayout = props => {
-  const [openCart, setOpenCart] = useState(false);
+  const location = useLocation();
+  const [openCart, setOpenCart] = useState(
+    location.state?.backFromCheckout ?? false
+  );
   const productsCart = useSelector(selectProductInCart);
   const quantityProductsInCart = productsCart.length;
+
+  console.log(location);
+  console.log(location.state?.backFromCheckout);
 
   const toggleCart = () => {
     setOpenCart(!openCart);

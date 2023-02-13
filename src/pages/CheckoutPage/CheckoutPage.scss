@@ -1,0 +1,23 @@
+.checkout-page {
+  .checkout-nav {
+    display: flex;
+    align-items: center;
+
+    .back-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 10px;
+
+      .icon {
+        width: 24px;
+        height: 24px;
+        fill: var(--main-cl);
+      }
+    }
+  }
+
+  .checkout-title {
+    text-align: center;
+  }
+}

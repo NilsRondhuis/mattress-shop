@@ -4,6 +4,7 @@ import HomePage from 'pages/HomePage/HomePage';
 import ProductsCategoryPage from 'pages/ProductsCategoryPage/ProductsCategoryPage';
 import ProductDetailsPage from 'pages/ProductDetailsPage/ProductDetailsPage';
 import HelpPage from 'pages/HelpPage/HelpPage';
+import CheckoutPage from 'pages/CheckoutPage/CheckoutPage';
 import productsConfig from 'data/products-config';
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
           />
           <Route path="help" element={<HelpPage />} />
         </Route>
+        <Route path="/checkout" element={<CheckoutPage />} />
       </Routes>
     </>
   );
