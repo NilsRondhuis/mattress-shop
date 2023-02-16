@@ -1,0 +1,49 @@
+.order-form,
+.fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-form {
+  padding: 20px;
+  background-color: var(--box-cl);
+  border-radius: var(--border-radius-shared);
+  // box-shadow: var(--box-shadow-shared);
+
+  .fieldset:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
+  .label {
+    margin-bottom: 5px;
+    .required {
+      color: var(--error-cl);
+    }
+  }
+
+  .input,
+  .textarea {
+    padding: 10px;
+    border: 1px solid var(--design-line-cl);
+    border-radius: var(--border-radius-shared);
+    resize: none;
+  }
+
+  .error-message {
+    color: var(--error-cl);
+  }
+
+  .submit-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    color: var(--white-cl);
+    background-color: var(--link-cl);
+    border: none;
+    border-radius: var(--border-radius-shared);
+
+    &:active {
+      background-color: var(--active-link-cl);
+    }
+  }
+}

@@ -9,6 +9,8 @@ const ProductCard = ({ name, img1x, img2x, oldPrice, newPrice, sale }) => {
           src={img1x}
           srcSet={`${img1x} 1x, ${img2x} 2x`}
           alt={`Матрац ${name}`}
+          width="200"
+          height="140"
         />
       </div>
       <div>

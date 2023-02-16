@@ -17,6 +17,7 @@ const Counter = ({ id, quantity }) => {
     <div className="cart-counter">
       <button
         type="button"
+        aria-label="decrement-button"
         disabled={quantity === 1}
         onClick={() => handleDecrement(id)}
         className="counter-btn"
@@ -26,6 +27,7 @@ const Counter = ({ id, quantity }) => {
       <span className="conter-value">{quantity}</span>
       <button
         type="button"
+        aria-label="increment-button"
         onClick={() => handleIncrement(id)}
         className="counter-btn"
       >

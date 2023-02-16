@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { deleteProductCart } from 'redux/cart/slice';
 import Counter from '../Counter/Counter';
 import { MdDeleteForever } from 'react-icons/md';
@@ -17,7 +17,9 @@ const CheckoutProduct = ({
   onToggle,
   quantity,
 }) => {
+  const location = useLocation();
   const dispatch = useDispatch();
+  const checkingOnCheckoutPage = location.pathname.includes('checkout');
 
   const handleDelete = productId => {
     dispatch(deleteProductCart(productId));
@@ -48,14 +50,16 @@ const CheckoutProduct = ({
 
         <Counter id={id} quantity={quantity} />
       </div>
-      <button
-        type="button"
-        className="delete-btn"
-        aria-label="delete-cart-product"
-        onClick={() => handleDelete(id)}
-      >
-        <MdDeleteForever className="icon" />
-      </button>
+      {!checkingOnCheckoutPage && (
+        <button
+          type="button"
+          className="delete-btn"
+          aria-label="delete-cart-product"
+          onClick={() => handleDelete(id)}
+        >
+          <MdDeleteForever className="icon" />
+        </button>
+      )}
     </div>
   );
 };
@@ -68,7 +72,7 @@ CheckoutProduct.propTypes = {
   size: PropTypes.string.isRequired,
   oldPrice: PropTypes.number.isRequired,
   newPrice: PropTypes.number.isRequired,
-  onToggle: PropTypes.func.isRequired,
+  onToggle: PropTypes.func,
   quantity: PropTypes.number.isRequired,
 };
 

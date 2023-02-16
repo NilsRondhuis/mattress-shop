@@ -17,7 +17,32 @@
     }
   }
 
+  .section-checkout {
+    padding: 0 0 30px 0;
+  }
+
   .checkout-title {
+    font-size: 21px;
     text-align: center;
+  }
+
+  .amount-box {
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: var(--box-cl);
+    border-radius: var(--border-radius-shared);
+    // box-shadow: var(--box-shadow-shared);
+  }
+
+  .footer {
+    .policy-text {
+      text-align: center;
+      color: var(--white-cl);
+    }
+
+    .policy-link {
+      text-decoration: underline;
+      color: var(--white-cl);
+    }
   }
 }

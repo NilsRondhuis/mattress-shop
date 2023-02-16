@@ -1,6 +1,6 @@
 // import PropTypes from "prop-types";
 import { useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import { useSelector } from 'react-redux';
 import { selectProductInCart } from 'redux/cart/selectors';
 import { Outlet } from 'react-router-dom';
@@ -22,9 +22,6 @@ const SharedLayout = props => {
   const productsCart = useSelector(selectProductInCart);
   const quantityProductsInCart = productsCart.length;
 
-  console.log(location);
-  console.log(location.state?.backFromCheckout);
-
   const toggleCart = () => {
     setOpenCart(!openCart);
   };
@@ -40,7 +37,9 @@ const SharedLayout = props => {
           </FlexContainer>
         </Container>
       </header>
-      <Outlet />
+      <Suspense fallback={<p>Loading...</p>}>
+        <Outlet />
+      </Suspense>
       <Footer />
 
       <Backdrop isOpen={openCart} onClose={toggleCart}>

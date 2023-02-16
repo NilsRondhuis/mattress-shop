@@ -13,8 +13,8 @@ const cartSlice = createSlice({
       state.items.map(item => {
         if (item.id === action.payload.id) {
           item.quantity = item.quantity + action.payload.increment;
-          item.oldPrice = item.oldPrice + item.initialCartOldPrice;
-          item.newPrice = item.newPrice + item.initialCartNewPrice;
+          item.oldPrice = item.oldPrice + item.initialOldPrice;
+          item.newPrice = item.newPrice + item.initialNewPrice;
           return item;
         }
         return item;
@@ -24,8 +24,8 @@ const cartSlice = createSlice({
       state.items.map(item => {
         if (item.id === action.payload.id) {
           item.quantity = item.quantity - action.payload.increment;
-          item.oldPrice = item.oldPrice - item.initialCartOldPrice;
-          item.newPrice = item.newPrice - item.initialCartNewPrice;
+          item.oldPrice = item.oldPrice - item.initialOldPrice;
+          item.newPrice = item.newPrice - item.initialNewPrice;
           return item;
         }
         return item;

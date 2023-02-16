@@ -12,6 +12,10 @@
   &.is-hidden {
     transform: translateX(100%);
   }
+
+  .cart-amount {
+    margin-bottom: 30px;
+  }
 }
 
 .cart-header {

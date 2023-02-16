@@ -13,11 +13,12 @@
   padding: 5px 10px;
   color: var(--main-cl);
   background-color: transparent;
-  border: 1px solid var(--main-cl);
+  outline: 1px solid var(--main-cl);
+  border: none;
   border-radius: var(--border-radius-shared);
   transition: var(--transition-settings);
 
   &.active {
-    border: 2px solid var(--link-cl);
+    outline: 2px solid var(--link-cl);
   }
 }

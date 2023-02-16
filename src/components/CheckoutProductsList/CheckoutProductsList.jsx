@@ -1,16 +1,8 @@
-import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import BtnLink from 'components/common/BtnLink/BtnLink';
 import CheckoutProduct from './CheckoutProduct/CheckoutProduct';
 import './CheckoutProductsList.scss';
 
 const CheckoutProductsList = ({ productsCart, onToggle }) => {
-  const location = useLocation();
-  const amount = productsCart.reduce((acc, item) => {
-    acc += item.newPrice;
-    return acc;
-  }, 0);
-
   return (
     <>
       <ul className="cart-product-list">
@@ -32,15 +24,6 @@ const CheckoutProductsList = ({ productsCart, onToggle }) => {
           )
         )}
       </ul>
-      <p className="cart-amount">
-        Всього разом: <span className="cart-price">{amount} грн.</span>
-      </p>
-      <BtnLink
-        to="/checkout"
-        type="cart-order-btn"
-        text="Оформити замовлення"
-        state={{ from: location }}
-      />
     </>
   );
 };
@@ -57,7 +40,7 @@ CheckoutProductsList.propTypes = {
       newPrice: PropTypes.number,
     })
   ).isRequired,
-  onToggle: PropTypes.func.isRequired,
+  onToggle: PropTypes.func,
 };
 
 export default CheckoutProductsList;

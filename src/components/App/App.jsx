@@ -1,11 +1,17 @@
-import { Routes, Route } from 'react-router-dom';
+import { lazy } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import SharedLayout from 'components/SharedLayout/SharedLayout';
-import HomePage from 'pages/HomePage/HomePage';
-import ProductsCategoryPage from 'pages/ProductsCategoryPage/ProductsCategoryPage';
-import ProductDetailsPage from 'pages/ProductDetailsPage/ProductDetailsPage';
-import HelpPage from 'pages/HelpPage/HelpPage';
 import CheckoutPage from 'pages/CheckoutPage/CheckoutPage';
 import productsConfig from 'data/products-config';
+
+const HomePage = lazy(() => import('pages/HomePage/HomePage'));
+const ProductsCategoryPage = lazy(() =>
+  import('pages/ProductsCategoryPage/ProductsCategoryPage')
+);
+const ProductDetailsPage = lazy(() =>
+  import('pages/ProductDetailsPage/ProductDetailsPage')
+);
+const HelpPage = lazy(() => import('pages/HelpPage/HelpPage'));
 
 const App = () => {
   return (
@@ -24,6 +30,8 @@ const App = () => {
           <Route path="help" element={<HelpPage />} />
         </Route>
         <Route path="/checkout" element={<CheckoutPage />} />
+        <Route path="/policy" element={<div>Policy</div>} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>
   );

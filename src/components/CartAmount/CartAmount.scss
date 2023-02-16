@@ -1,0 +1,12 @@
+.amount-sale {
+  color: var(--success-cl);
+}
+
+.amount-cost {
+  font-weight: 600;
+
+  .cost {
+    font-weight: normal;
+    font-size: 18px;
+  }
+}
