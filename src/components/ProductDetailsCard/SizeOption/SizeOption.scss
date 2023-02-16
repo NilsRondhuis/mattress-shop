@@ -10,15 +10,17 @@
 }
 
 .size-btn {
+  position: relative;
   padding: 5px 10px;
   color: var(--main-cl);
   background-color: transparent;
-  outline: 1px solid var(--main-cl);
   border: none;
   border-radius: var(--border-radius-shared);
+  outline: 1px solid var(--main-cl);
   transition: var(--transition-settings);
 
-  &.active {
-    outline: 2px solid var(--link-cl);
+  &.active,
+  &:focus {
+    outline: 3px solid var(--link-cl);
   }
 }

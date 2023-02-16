@@ -12,6 +12,7 @@ import BtnMenu from 'components/BtnMenu/BtnMenu';
 import Logo from 'components/common/Logo/Logo';
 import Cart from 'components/Cart/Cart';
 import Footer from 'components/Footer/Footer';
+import PageLoader from 'components/common/PageLoader/PageLoader';
 import './SharedLayout.scss';
 
 const SharedLayout = props => {
@@ -37,7 +38,7 @@ const SharedLayout = props => {
           </FlexContainer>
         </Container>
       </header>
-      <Suspense fallback={<p>Loading...</p>}>
+      <Suspense fallback={<PageLoader />}>
         <Outlet />
       </Suspense>
       <Footer />
