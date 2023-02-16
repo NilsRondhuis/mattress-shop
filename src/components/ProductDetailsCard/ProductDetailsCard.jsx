@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
+import { toast } from 'react-hot-toast';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectProductInCart } from 'redux/cart/selectors';
 import { addProductToCart } from 'redux/cart/slice';
@@ -32,6 +33,7 @@ const ProductDetailsCard = ({ product }) => {
       size,
     };
     dispatch(addProductToCart(productToCart));
+    toast.success('Товар у кошику 😊');
   };
 
   return (
