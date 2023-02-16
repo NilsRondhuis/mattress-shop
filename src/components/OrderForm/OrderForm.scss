@@ -44,5 +44,8 @@
     &:active {
       background-color: var(--active-link-cl);
     }
+    &:disabled {
+      background-color: var(--disabled-link-cl);
+    }
   }
 }

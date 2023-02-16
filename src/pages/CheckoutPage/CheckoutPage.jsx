@@ -14,11 +14,38 @@ import OrderForm from 'components/OrderForm/OrderForm';
 import BtnLink from 'components/common/BtnLink/BtnLink';
 import { AiOutlineLeft } from 'react-icons/ai';
 import './CheckoutPage.scss';
+import { submitInfo } from 'services/fetchTelegram';
+import { toast } from 'react-hot-toast';
 
 const CheckoutPage = props => {
   const location = useLocation();
   const productsCart = useSelector(selectProductInCart);
   const amount = useSelector(selectCalculateAmount);
+
+  const handleSubmit = async values => {
+    let message = `<b>Заявка з сайту!</b>\n`;
+    message += `<b>Відправник: </b> ${values.name}\n`;
+    message += `<b>Телефон: </b> ${values.phone}\n`;
+    message += productsCart
+      .map(item => {
+        return `<b>Товар: </b> ${item.name} ${item.size} (К-сть: ${item.quantity})\n`;
+      })
+      .join('');
+
+    try {
+      await submitInfo(message);
+      toast.success(
+        'Готово 😎. Очікуйте на дзвінок менеджера в найближчий час.',
+        {
+          duration: 4000,
+        }
+      );
+    } catch {
+      toast.error(
+        'Щось пішло не так 😒. Спробуйте ще раз, або перезавантажте сторінку.'
+      );
+    }
+  };
 
   return (
     <main className="checkout-page">
@@ -48,7 +75,7 @@ const CheckoutPage = props => {
               cost={amount.cost}
             />
           </div>
-          <OrderForm />
+          <OrderForm onSubmit={handleSubmit} />
         </Container>
       </Section>
       <footer className="footer">

@@ -25,9 +25,10 @@ const schema = yup.object().shape({
     .required("Обов'язкове поле"),
 });
 
-const OrderForm = props => {
-  const handleSubmit = (values, actions) => {
-    console.log(values);
+const OrderForm = ({ onSubmit }) => {
+  const handleSubmit = async (values, actions) => {
+    await onSubmit(values);
+    actions.setSubmitting(false);
     actions.resetForm();
   };
 
@@ -38,42 +39,48 @@ const OrderForm = props => {
         initialValues={initialValues}
         validationSchema={schema}
       >
-        <Form className="order-form" autoComplete="off">
-          <label className="fieldset">
-            <span className="label">
-              Ім'я<span className="required">*</span>
-            </span>
-            <Field type="text" name="name" className="input" />
-            <ErrorMessage
-              component="div"
-              name="name"
-              className="error-message"
-            />
-          </label>
-          <label className="fieldset">
-            <span className="label">
-              Телефон<span className="required">*</span>
-            </span>
-            <Field type="tel" name="phone" className="input" />
-            <ErrorMessage
-              component="div"
-              name="phone"
-              className="error-message"
-            />
-          </label>
-          <label className="fieldset">
-            <span className="label">Коментар</span>
-            <Field
-              as="textarea"
-              name="comment"
-              className="textarea"
-              style={{ width: '100%', height: '100px' }}
-            />
-          </label>
-          <button type="submit" className="submit-btn">
-            Оформити замовлення
-          </button>
-        </Form>
+        {({ isSubmitting }) => (
+          <Form className="order-form" autoComplete="off">
+            <label className="fieldset">
+              <span className="label">
+                Ім'я<span className="required">*</span>
+              </span>
+              <Field type="text" name="name" className="input" />
+              <ErrorMessage
+                component="div"
+                name="name"
+                className="error-message"
+              />
+            </label>
+            <label className="fieldset">
+              <span className="label">
+                Телефон<span className="required">*</span>
+              </span>
+              <Field type="tel" name="phone" className="input" />
+              <ErrorMessage
+                component="div"
+                name="phone"
+                className="error-message"
+              />
+            </label>
+            <label className="fieldset">
+              <span className="label">Коментар</span>
+              <Field
+                as="textarea"
+                name="comment"
+                className="textarea"
+                style={{ width: '100%', height: '100px' }}
+              />
+            </label>
+            <button
+              type="submit"
+              className="submit-btn"
+              disabled={isSubmitting}
+            >
+              Оформити замовлення
+            </button>
+          </Form>
+        )}
       </Formik>
     </>
   );
