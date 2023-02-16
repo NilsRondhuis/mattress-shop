@@ -14,13 +14,12 @@
   padding: 5px 10px;
   color: var(--main-cl);
   background-color: transparent;
-  border: none;
+  border: 1px solid var(--main-cl);
   border-radius: var(--border-radius-shared);
-  outline: 1px solid var(--main-cl);
   transition: var(--transition-settings);
 
   &.active,
   &:focus {
-    outline: 3px solid var(--link-cl);
+    border: 2px solid var(--link-cl);
   }
 }
