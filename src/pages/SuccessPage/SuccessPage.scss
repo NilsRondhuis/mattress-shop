@@ -1,0 +1,26 @@
+.success-section {
+  height: 100vh;
+
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .content-box {
+    text-align: center;
+  }
+
+  .info-text {
+    margin-bottom: 10px;
+    .bold {
+      font-weight: 600;
+    }
+  }
+
+  .thank-text {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+}

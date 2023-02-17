@@ -2,7 +2,7 @@ import { lazy } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import SharedLayout from 'components/SharedLayout/SharedLayout';
-import CheckoutPage from 'pages/CheckoutPage/CheckoutPage';
+import RestrictedRoutes from 'components/RestrictedRoutes/RestrictedRoutes';
 import productsConfig from 'data/products-config';
 
 const HomePage = lazy(() => import('pages/HomePage/HomePage'));
@@ -13,6 +13,8 @@ const ProductDetailsPage = lazy(() =>
   import('pages/ProductDetailsPage/ProductDetailsPage')
 );
 const HelpPage = lazy(() => import('pages/HelpPage/HelpPage'));
+const CheckoutPage = lazy(() => import('pages/CheckoutPage/CheckoutPage'));
+const SuccessPage = lazy(() => import('pages/SuccessPage/SuccessPage'));
 
 const App = () => {
   return (
@@ -30,7 +32,15 @@ const App = () => {
           />
           <Route path="help" element={<HelpPage />} />
         </Route>
-        <Route path="/checkout" element={<CheckoutPage />} />
+
+        <Route
+          path="/checkout"
+          element={<RestrictedRoutes component={CheckoutPage} />}
+        />
+        <Route
+          path="/order-info"
+          element={<RestrictedRoutes component={SuccessPage} />}
+        />
         <Route path="/policy" element={<div>Policy</div>} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>

@@ -1,5 +1,5 @@
 export const selectProductInCart = state => state.cart.items;
-
+export const selectOrderId = state => state.cart.orderId;
 export const selectCalculateAmount = state => {
   const productsCart = selectProductInCart(state);
 

@@ -1,10 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import { generateId } from 'services/generateOrderId';
+
+const initialState = {
+  items: [],
+  orderId: generateId(),
+};
 
 const cartSlice = createSlice({
   name: 'cart',
-  initialState: { items: [] },
+  initialState: initialState,
   reducers: {
     addProductToCart(state, action) {
       state.items.push(action.payload);
@@ -35,6 +41,12 @@ const cartSlice = createSlice({
       const idx = state.items.findIndex(({ id }) => id === action.payload);
       state.items.splice(idx, 1);
     },
+    clearCart(state) {
+      state.items = [];
+    },
+    updateOrderId(state) {
+      state.orderId = generateId();
+    },
   },
 });
 
@@ -53,4 +65,6 @@ export const {
   incrementProductCart,
   decrementProductCart,
   deleteProductCart,
+  clearCart,
+  updateOrderId,
 } = cartSlice.actions;
