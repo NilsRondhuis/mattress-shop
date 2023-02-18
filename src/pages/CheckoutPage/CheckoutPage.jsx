@@ -37,6 +37,7 @@ const CheckoutPage = props => {
           `<b>Товар: </b> ${item.name} ${item.size} (К-сть: ${item.quantity})\n`
       )
       .join('');
+    message += `<b>Коментар: </b>${values.comment}`;
 
     try {
       await submitInfo(message);

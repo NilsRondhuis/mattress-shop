@@ -44,6 +44,8 @@ const ProductDetailsCard = ({ product }) => {
           srcSet={`${product.img1x} 1x, ${product.img2x} 2x`}
           src={product.img1x}
           alt={`Матрац ${product.name}`}
+          width="360"
+          height="250"
         />
       </div>
 

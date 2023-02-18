@@ -14,10 +14,7 @@ const SuccessPage = props => {
   const orderId = useSelector(selectOrderId);
 
   useEffect(() => {
-    console.log('Mounting phase: same when componentDidMount runs');
-
     return () => {
-      console.log('Unmounting phase: same when componentWillUnmount runs');
       dispatch(clearCart());
       dispatch(updateOrderId());
     };
