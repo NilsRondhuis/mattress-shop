@@ -11,6 +11,7 @@ const ProductCard = ({ name, img1x, img2x, oldPrice, newPrice, sale }) => {
           alt={`Матрац ${name}`}
           width="200"
           height="140"
+          loading="lazy"
         />
       </div>
       <div>

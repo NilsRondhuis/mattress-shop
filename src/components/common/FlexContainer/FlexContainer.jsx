@@ -1,7 +1,7 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 const FlexContainer = ({ type, children }) => (
-  <div className={`${type}`}>{children}</div>
+  <div className={type}>{children}</div>
 );
 
 FlexContainer.propTypes = {

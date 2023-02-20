@@ -1,9 +1,14 @@
 .header {
-  padding: 10px 0;
+  padding-top: 25px;
 
   .flex-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+  }
+
+  .logo-header {
+    position: relative;
+    bottom: 15px;
   }
 }

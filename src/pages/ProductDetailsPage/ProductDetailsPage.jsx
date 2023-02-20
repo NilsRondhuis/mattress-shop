@@ -15,7 +15,7 @@ const ProductDetailsPage = ({ products }) => {
   return (
     <main>
       <ScrollToTop />
-      <Section>
+      <Section type="section-details">
         <Container>
           <div className="product-details">
             <BtnLink

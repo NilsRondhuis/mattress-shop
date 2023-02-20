@@ -7,7 +7,6 @@ import CartAmount from 'components/CartAmount/CartAmount';
 import BtnLink from 'components/common/BtnLink/BtnLink';
 import BtnClose from 'components/common/BtnClose/BtnClose';
 import CartNoProduct from 'components/CartNoProduct/CartNoProduct';
-import { AiOutlineCloseCircle } from 'react-icons/ai';
 import './CartMenu.scss';
 
 const CartMenu = ({ isOpen, onToggle, productsCart }) => {
@@ -18,9 +17,7 @@ const CartMenu = ({ isOpen, onToggle, productsCart }) => {
     <div className={isOpen ? 'cart-menu' : 'cart-menu is-hidden'}>
       <div className="cart-header">
         <h4 className="cart-title">Ваш кошик</h4>
-        <BtnClose type="btn-close-cart" onClick={onToggle}>
-          <AiOutlineCloseCircle className="icon" />
-        </BtnClose>
+        <BtnClose onClick={onToggle} />
       </div>
       {productsCart.length > 0 ? (
         <>

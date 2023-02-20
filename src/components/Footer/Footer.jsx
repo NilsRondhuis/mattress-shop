@@ -12,12 +12,14 @@ const Footer = props => {
     <footer className="footer">
       <Container>
         <FlexContainer type="footer-flex-container">
-          <Logo />
+          <Logo place="footer" />
           <Address />
           <div className="content-box">
             <p className="time-work">з 8:00 до 21:00 без вихідних</p>
           </div>
-          <Socials title="Ми в соціальних мережах" />
+          <div className="footer-socials-container">
+            <Socials title="Ми в соціальних мережах" colorIcon="color-icon" />
+          </div>
           <Copy />
         </FlexContainer>
       </Container>

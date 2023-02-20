@@ -8,6 +8,7 @@ import Container from 'components/common/Container/Container';
 import FlexContainer from 'components/common/FlexContainer/FlexContainer';
 import Backdrop from 'components/common/Backdrop/Backdrop';
 import CartMenu from 'components/CartMenu/CartMenu';
+import NavMenu from 'components/NavMenu/NavMenu';
 import BtnMenu from 'components/BtnMenu/BtnMenu';
 import Logo from 'components/common/Logo/Logo';
 import Cart from 'components/Cart/Cart';
@@ -20,6 +21,7 @@ const SharedLayout = props => {
   const [openCart, setOpenCart] = useState(
     location.state?.backFromCheckout ?? false
   );
+  const [openNavMenu, setOpenNavMenu] = useState(false);
   const productsCart = useSelector(selectProductInCart);
   const quantityProductsInCart = productsCart.length;
 
@@ -27,13 +29,17 @@ const SharedLayout = props => {
     setOpenCart(!openCart);
   };
 
+  const toggleNavMenu = () => {
+    setOpenNavMenu(!openNavMenu);
+  };
+
   return (
     <>
       <header className="header">
         <Container>
           <FlexContainer type="flex-container">
-            <BtnMenu />
-            <Logo />
+            <BtnMenu onToggle={toggleNavMenu} />
+            <Logo place="header" type="logo-header" />
             <Cart onToggleCart={toggleCart} quantity={quantityProductsInCart} />
           </FlexContainer>
         </Container>
@@ -49,6 +55,9 @@ const SharedLayout = props => {
           onToggle={toggleCart}
           productsCart={productsCart}
         />
+      </Backdrop>
+      <Backdrop isOpen={openNavMenu} onClose={toggleNavMenu}>
+        <NavMenu isOpen={openNavMenu} onToggle={toggleNavMenu} />
       </Backdrop>
     </>
   );

@@ -1,0 +1,13 @@
+.btn-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+
+  .icon {
+    width: 25px;
+    height: 25px;
+    color: var(--main-cl);
+  }
+}

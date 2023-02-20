@@ -1,19 +1,20 @@
 import PropTypes from 'prop-types';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
+import './BtnClose.scss';
 
-const BtnClose = ({ children, type, onClick }) => (
+const BtnClose = ({ type, onClick }) => (
   <button
     type="button"
-    aria-label="button-close-cart"
-    className={type}
+    aria-label="button-close"
+    className={type ? `btn-close ${type}` : 'btn-close'}
     onClick={onClick}
   >
-    {children}
+    <AiOutlineCloseCircle className="icon" />
   </button>
 );
 
 BtnClose.propTypes = {
-  children: PropTypes.node,
-  type: PropTypes.string.isRequired,
+  type: PropTypes.string,
   onClick: PropTypes.func.isRequired,
 };
 

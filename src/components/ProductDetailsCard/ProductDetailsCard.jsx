@@ -46,6 +46,7 @@ const ProductDetailsCard = ({ product }) => {
           alt={`Матрац ${product.name}`}
           width="360"
           height="250"
+          loading="lazy"
         />
       </div>
 
