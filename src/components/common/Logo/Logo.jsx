@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import logoLight from 'images/logo/logo-light.jpg';
-import logoDark from 'images/logo/logo-dark.jpg';
-import logoMenu from 'images/logo/logo-menu.jpg';
-import logoLight2x from 'images/logo/logo-light@2x.jpg';
-import logoDark2x from 'images/logo/logo-dark@2x.jpg';
-import logoMenu2x from 'images/logo/logo-menu@2x.jpg';
+import logoLight from 'images/logo/mobile/logo-light.jpg';
+import logoDark from 'images/logo/mobile/logo-dark.jpg';
+import logoMenu from 'images/logo/mobile/logo-menu.jpg';
+import logoLight2x from 'images/logo/mobile/logo-light@2x.jpg';
+import logoDark2x from 'images/logo/mobile/logo-dark@2x.jpg';
+import logoMenu2x from 'images/logo/mobile/logo-menu@2x.jpg';
 import './Logo.scss';
 
 const checkImgType = place => {
@@ -22,7 +22,7 @@ const checkImgType = place => {
     images.img = logoDark;
     images.imgSet = `${logoDark} 1x, ${logoDark2x} 2x`;
   }
-  if (place === 'menu') {
+  if (place === 'other') {
     images.img = logoMenu;
     images.imgSet = `${logoMenu} 1x, ${logoMenu2x} 2x`;
   }

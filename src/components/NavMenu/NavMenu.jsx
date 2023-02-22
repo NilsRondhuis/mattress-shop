@@ -12,7 +12,7 @@ const NavMenu = ({ isOpen, onToggle }) => {
     <div className={isOpen ? 'nav-menu' : 'nav-menu is-hidden'}>
       <nav className="main-nav">
         <FlexContainer type="nav-flex-container">
-          <Logo place="menu" />
+          <Logo place="other" />
           <BtnClose onClick={onToggle} />
         </FlexContainer>
         <ul className="nav-list">

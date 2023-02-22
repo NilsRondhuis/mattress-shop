@@ -55,7 +55,7 @@ const CheckoutPage = props => {
 
   return (
     <main className="checkout-page">
-      <header className="header">
+      <header>
         <nav className="checkout-nav">
           <Link
             className="back-link"
@@ -64,7 +64,7 @@ const CheckoutPage = props => {
           >
             <AiOutlineLeft className="icon" />
           </Link>
-          <Logo />
+          <Logo place="other" />
         </nav>
       </header>
       <Section type="section-checkout">
