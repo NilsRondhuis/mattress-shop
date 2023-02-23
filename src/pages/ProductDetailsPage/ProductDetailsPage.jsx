@@ -4,7 +4,6 @@ import Section from 'components/common/Section/Section';
 import Container from 'components/common/Container/Container';
 import BtnLink from 'components/common/BtnLink/BtnLink';
 import ProductDetailsCard from 'components/ProductDetailsCard/ProductDetailsCard';
-import ScrollToTop from 'components/common/ScrollToTop/ScrollToTop';
 import { HiArrowNarrowLeft } from 'react-icons/hi';
 import './ProductDetailsPage.scss';
 
@@ -14,7 +13,6 @@ const ProductDetailsPage = ({ products }) => {
 
   return (
     <main>
-      <ScrollToTop />
       <Section type="section-details">
         <Container>
           <div className="product-details">

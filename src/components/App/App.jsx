@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import SharedLayout from 'components/SharedLayout/SharedLayout';
 import RestrictedRoutes from 'components/RestrictedRoutes/RestrictedRoutes';
+import ScrollToTop from 'components/common/ScrollToTop/ScrollToTop';
 import productsConfig from 'data/products-config';
 
 const HomePage = lazy(() => import('pages/HomePage/HomePage'));
@@ -19,6 +20,7 @@ const SuccessPage = lazy(() => import('pages/SuccessPage/SuccessPage'));
 const App = () => {
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage products={productsConfig} />} />

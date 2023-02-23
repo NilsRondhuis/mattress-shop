@@ -1,0 +1,32 @@
+.help-article {
+  & > *:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  .box-img {
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .item-title {
+    font-family: var(--second-title-font);
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--black-cl);
+  }
+
+  .text {
+    text-align: justify;
+    .bold {
+      font-weight: 700;
+    }
+  }
+
+  .list-type-mattress {
+    padding-left: 20px;
+
+    list-style-type: disc;
+  }
+}
