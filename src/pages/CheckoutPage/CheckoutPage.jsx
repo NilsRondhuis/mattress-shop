@@ -1,4 +1,3 @@
-// import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { Link, useLocation, Navigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
@@ -19,7 +18,7 @@ import PolicyLink from 'components/common/PolicyLink/PolicyLink';
 import { AiOutlineLeft } from 'react-icons/ai';
 import './CheckoutPage.scss';
 
-const CheckoutPage = props => {
+const CheckoutPage = () => {
   const location = useLocation();
   const productsCart = useSelector(selectProductInCart);
   const orderId = useSelector(selectOrderId);
@@ -95,7 +94,5 @@ const CheckoutPage = props => {
     </main>
   );
 };
-
-CheckoutPage.propTypes = {};
 
 export default CheckoutPage;

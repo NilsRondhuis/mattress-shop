@@ -11,17 +11,7 @@ import AdditionalInfo from './AdditionalInfo/AdditionalInfo';
 import ProductInfo from './ProductInfo/ProductInfo';
 import { BsFillCartCheckFill } from 'react-icons/bs';
 import { FaShoppingCart } from 'react-icons/fa';
-import smilingIcon from 'images/icons/smiling.png';
 import './ProductDetailsCard.scss';
-
-const SuccessCart = () => (
-  <p style={{ display: 'flex' }}>
-    Товар у кошику{' '}
-    <span style={{ marginLeft: 5 }}>
-      <img src={smilingIcon} alt="" width="21" height="21" />
-    </span>
-  </p>
-);
 
 const ProductDetailsCard = ({ product }) => {
   const dispatch = useDispatch();
@@ -43,7 +33,7 @@ const ProductDetailsCard = ({ product }) => {
       size,
     };
     dispatch(addProductToCart(productToCart));
-    toast.success(<SuccessCart />);
+    toast.success('Товар у кошику 😊');
   };
 
   return (

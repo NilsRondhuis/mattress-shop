@@ -5,7 +5,7 @@ import PrevArrow from 'components/ArrowSlider/PrevArrow/PrevArrow';
 import { Dots, PagingSlider } from 'components/PagingSlider/PagingSlider';
 import heroConfig from 'data/hero-config';
 
-const HeroSlider = props => {
+const HeroSlider = () => {
   const settings = {
     dots: true,
     infinite: true,
@@ -27,7 +27,5 @@ const HeroSlider = props => {
     </Slider>
   );
 };
-
-HeroSlider.propTypes = {};
 
 export default HeroSlider;

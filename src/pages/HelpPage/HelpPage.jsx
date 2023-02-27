@@ -1,4 +1,3 @@
-// import PropTypes from "prop-types";
 import Section from 'components/common/Section/Section';
 import Container from 'components/common/Container/Container';
 import BtnLink from 'components/common/BtnLink/BtnLink';
@@ -6,7 +5,7 @@ import { HiArrowNarrowLeft } from 'react-icons/hi';
 import HelpArticle from 'components/HelpArticle/HelpArticle';
 import './HelpPage.scss';
 
-const HelpPage = props => {
+const HelpPage = () => {
   return (
     <main>
       <Section type="section-help-page">
@@ -23,7 +22,5 @@ const HelpPage = props => {
     </main>
   );
 };
-
-HelpPage.propTypes = {};
 
 export default HelpPage;

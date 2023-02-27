@@ -1,4 +1,3 @@
-// import PropTypes from "prop-types";
 import { useLocation } from 'react-router-dom';
 import { useState, Suspense } from 'react';
 import { useSelector } from 'react-redux';
@@ -16,7 +15,7 @@ import Footer from 'components/Footer/Footer';
 import PageLoader from 'components/common/PageLoader/PageLoader';
 import './SharedLayout.scss';
 
-const SharedLayout = props => {
+const SharedLayout = () => {
   const location = useLocation();
   const [openCart, setOpenCart] = useState(
     location.state?.backFromCheckout ?? false

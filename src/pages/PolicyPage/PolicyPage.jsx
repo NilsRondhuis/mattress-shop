@@ -204,7 +204,9 @@ const PolicyPage = () => {
             примітки про конфіденційність для певних програм.
           </p>
 
-          <Link to={location.state.from}>back</Link>
+          <Link to={location.state.from} className="back-link">
+            Повернутися назад
+          </Link>
         </Container>
       </Section>
     </main>

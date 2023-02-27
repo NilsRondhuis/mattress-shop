@@ -1,4 +1,4 @@
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import './OrderForm.scss';
@@ -86,6 +86,8 @@ const OrderForm = ({ onSubmit }) => {
   );
 };
 
-OrderForm.propTypes = {};
+OrderForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
 
 export default OrderForm;

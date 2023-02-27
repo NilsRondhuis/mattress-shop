@@ -1,9 +1,8 @@
-import Slider from "react-slick";
-// import PropTypes from 'prop-types'
-import ReviewSlide from "components/ReviewSlide/ReviewSlide";
-import reviewsConfig from "data/reviews-config";
+import Slider from 'react-slick';
+import ReviewSlide from 'components/ReviewSlide/ReviewSlide';
+import reviewsConfig from 'data/reviews-config';
 
-const ReviewsSlider = (props) => {
+const ReviewsSlider = () => {
   const settings = {
     dots: true,
     infinite: true,
@@ -13,7 +12,7 @@ const ReviewsSlider = (props) => {
     adaptiveHeight: true,
   };
   return (
-    <div style={{ padding: "20px 0", overflow: "hidden" }}>
+    <div style={{ padding: '20px 0', overflow: 'hidden' }}>
       <Slider {...settings}>
         {reviewsConfig.map(({ id, img, img2x, name, text }) => (
           <div key={id}>
@@ -24,7 +23,5 @@ const ReviewsSlider = (props) => {
     </div>
   );
 };
-
-ReviewsSlider.propTypes = {};
 
 export default ReviewsSlider;

@@ -29,4 +29,12 @@
     text-align: center;
     line-height: 1.2;
   }
+
+  .back-link {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: var(--main-cl);
+  }
 }

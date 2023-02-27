@@ -1,9 +1,10 @@
 import Section from 'components/common/Section/Section';
 import Container from 'components/common/Container/Container';
-import sectionImg from 'images/about/mobile/item-1.png';
+import sectionImg from 'images/about/mobile/item-1.jpg';
+import sectionImg2x from 'images/about/mobile/item-1@2x.jpg';
 import './AboutPage.scss';
 
-const AboutPage = props => {
+const AboutPage = () => {
   return (
     <main>
       <Section type="section-about">
@@ -20,6 +21,7 @@ const AboutPage = props => {
           <div className="box-img">
             <img
               src={sectionImg}
+              srcSet={`${sectionImg} 1x, ${sectionImg2x} 2x`}
               alt="Робочий процес Markiz Company"
               width="450"
               height="297"

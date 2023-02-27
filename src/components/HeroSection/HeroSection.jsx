@@ -1,4 +1,3 @@
-// import PropTypes from "prop-types";
 import Section from 'components/common/Section/Section';
 import Container from 'components/common/Container/Container';
 import HeroSlider from 'components/HeroSlider/HeroSlider';
@@ -7,7 +6,7 @@ import mainTitle from 'images/main-title/mobile/main-title.jpg';
 import mainTitle2x from 'images/main-title/mobile/main-title@2x.jpg';
 import './HeroSection.scss';
 
-const Hero = props => {
+const Hero = () => {
   return (
     <Section type="section-hero">
       <Container>
@@ -30,7 +29,5 @@ const Hero = props => {
     </Section>
   );
 };
-
-Hero.propTypes = {};
 
 export default Hero;
