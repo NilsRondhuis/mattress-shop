@@ -23,7 +23,6 @@ const HelpArticle = () => {
         <img
           src={intro}
           srcSet={`${intro} 1x, ${intro_2x} 2x`}
-          loading="lazy"
           alt="Задумливий хлопець сидить на ліжку"
           width="450"
           height="300"

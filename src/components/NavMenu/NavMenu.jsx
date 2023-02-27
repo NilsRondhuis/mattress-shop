@@ -18,7 +18,7 @@ const NavMenu = ({ isOpen, onToggle }) => {
         <ul className="nav-list">
           {navMenuConfig.map(({ text, to }) => (
             <li key={text} className="item">
-              <NavLink to={to} className="nav-link">
+              <NavLink to={to} className="nav-link" onClick={() => onToggle()}>
                 {text}
               </NavLink>
             </li>

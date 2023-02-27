@@ -1,0 +1,22 @@
+.advantages-list {
+  .item {
+    display: flex;
+    align-items: flex-start;
+
+    .box-icon {
+      margin-right: 15px;
+      min-width: 21px;
+      min-height: 21px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .title {
+    margin-bottom: 5px;
+    font-size: 21px;
+    line-height: 1;
+  }
+}

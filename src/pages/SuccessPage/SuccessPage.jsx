@@ -7,6 +7,8 @@ import Section from 'components/common/Section/Section';
 import Container from 'components/common/Container/Container';
 import FlexContainer from 'components/common/FlexContainer/FlexContainer';
 import BtnLink from 'components/common/BtnLink/BtnLink';
+import sunglassesImg from 'images/icons/sunglasses.png';
+import huggingImg from 'images/icons/hugging.png';
 import './SuccessPage.scss';
 
 const SuccessPage = props => {
@@ -26,12 +28,23 @@ const SuccessPage = props => {
         <Container>
           <FlexContainer type="flex-container">
             <div className="content-box">
-              <h2 className="section-title">Готово 😎</h2>
+              <h2 className="section-title success-title">
+                <span className="text">Готово</span>{' '}
+                <img
+                  src={sunglassesImg}
+                  alt="sunglasses"
+                  width="28"
+                  height="28"
+                />
+              </h2>
               <p className="info-text">
                 Замовлення <span className="bold">№ {orderId}</span> прийняте,
                 готуємо його до відправлення, очікуйте на дзвінок менеджера.
               </p>
-              <p className="thank-text">Дякуємо за Ваш вибір 🤗</p>
+              <p className="thank-text">
+                <span className="text">Дякуємо за Ваш вибір</span>{' '}
+                <img src={huggingImg} alt="hugging" width="21" height="21" />
+              </p>
               <BtnLink to="/" text="На головну сторінку" />
             </div>
           </FlexContainer>
@@ -40,7 +53,5 @@ const SuccessPage = props => {
     </main>
   );
 };
-
-SuccessPage.propTypes = {};
 
 export default SuccessPage;

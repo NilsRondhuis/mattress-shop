@@ -15,7 +15,7 @@ import Container from 'components/common/Container/Container';
 import CheckoutProductsList from 'components/CheckoutProductsList/CheckoutProductsList';
 import CartAmount from 'components/CartAmount/CartAmount';
 import OrderForm from 'components/OrderForm/OrderForm';
-import BtnLink from 'components/common/BtnLink/BtnLink';
+import PolicyLink from 'components/common/PolicyLink/PolicyLink';
 import { AiOutlineLeft } from 'react-icons/ai';
 import './CheckoutPage.scss';
 
@@ -88,12 +88,7 @@ const CheckoutPage = props => {
         <Container>
           <p className="policy-text">
             Натискаючи на кнопку "Оформити замовлення", Ви погоджуєтесь з{' '}
-            <BtnLink
-              to="/policy"
-              type="policy-link"
-              text="політикою конфіденційності"
-            />{' '}
-            website.com
+            <PolicyLink text="політикою конфіденційності" /> markiz-matress.com
           </p>
         </Container>
       </footer>

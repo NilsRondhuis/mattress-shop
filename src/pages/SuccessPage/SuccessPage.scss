@@ -23,6 +23,16 @@
       url(../../images/success/mobile/bg@2x.jpg);
   }
 
+  .success-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .text {
+      margin-right: 5px;
+    }
+  }
+
   .flex-container {
     display: flex;
     justify-content: center;
@@ -42,7 +52,14 @@
   }
 
   .thank-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 20px;
     font-size: 18px;
+
+    .text {
+      margin-right: 5px;
+    }
   }
 }

@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
-import "./Copy.scss";
+import { useState, useEffect } from 'react';
+import PolicyLink from 'components/common/PolicyLink/PolicyLink';
+import './Copy.scss';
 
 const Copy = () => {
   const [currentYear, setCurrentYear] = useState(null);
@@ -11,7 +12,8 @@ const Copy = () => {
 
   return (
     <div className="copy-box">
-      <p className="copy">Website name &copy; {currentYear}</p>
+      <p className="copy">Markiz Company &copy; {currentYear}</p>
+      <PolicyLink text="політика конфіденційності" />
     </div>
   );
 };

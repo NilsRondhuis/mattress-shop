@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-// import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import Section from 'components/common/Section/Section';
 import Container from 'components/common/Container/Container';
 import BtnLink from 'components/common/BtnLink/BtnLink';
@@ -10,41 +10,51 @@ import './ProductsCategoryPage.scss';
 const ProductsCategoryPage = ({ products }) => {
   return (
     <main>
-      <Section>
+      <Section type="section-category">
         <Container>
-          <div className="product-category">
-            <BtnLink
-              to="/"
-              text="назад на головну"
-              type="btn-back"
-              icon={<HiArrowNarrowLeft className="icon" />}
-            />
-            <h2 className="section-title">Ортопедичні матраци</h2>
-            <ul className="list-products">
-              {products.map(
-                ({ id, name, img1x, img2x, oldPrice, newPrice, sale }) => (
-                  <li key={id} className="item">
-                    <Link to={`${name}`}>
-                      <ProductCard
-                        name={name}
-                        img1x={img1x}
-                        img2x={img2x}
-                        oldPrice={oldPrice}
-                        newPrice={newPrice}
-                        sale={sale}
-                      />
-                    </Link>
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
+          <BtnLink
+            to="/"
+            text="на головну сторінку"
+            type="btn-back"
+            icon={<HiArrowNarrowLeft className="icon" />}
+          />
+          <h2 className="section-title">Ортопедичні матраци</h2>
+          <ul className="list-products">
+            {products.map(
+              ({ id, name, img1x, img2x, oldPrice, newPrice, sale }) => (
+                <li key={id} className="item">
+                  <Link to={`${name}`}>
+                    <ProductCard
+                      name={name}
+                      img1x={img1x}
+                      img2x={img2x}
+                      oldPrice={oldPrice}
+                      newPrice={newPrice}
+                      sale={sale}
+                    />
+                  </Link>
+                </li>
+              )
+            )}
+          </ul>
         </Container>
       </Section>
     </main>
   );
 };
 
-ProductsCategoryPage.propTypes = {};
+ProductsCategoryPage.propTypes = {
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      img1x: PropTypes.string.isRequired,
+      img2x: PropTypes.string.isRequired,
+      oldPrice: PropTypes.number.isRequired,
+      newPrice: PropTypes.number.isRequired,
+      sale: PropTypes.bool.isRequired,
+    })
+  ).isRequired,
+};
 
 export default ProductsCategoryPage;

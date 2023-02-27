@@ -1,9 +1,10 @@
-import { lazy } from 'react';
+import { lazy, Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import SharedLayout from 'components/SharedLayout/SharedLayout';
 import RestrictedRoutes from 'components/RestrictedRoutes/RestrictedRoutes';
 import ScrollToTop from 'components/common/ScrollToTop/ScrollToTop';
+import PageLoader from 'components/common/PageLoader/PageLoader';
 import productsConfig from 'data/products-config';
 
 const HomePage = lazy(() => import('pages/HomePage/HomePage'));
@@ -13,9 +14,12 @@ const ProductsCategoryPage = lazy(() =>
 const ProductDetailsPage = lazy(() =>
   import('pages/ProductDetailsPage/ProductDetailsPage')
 );
+const AboutPage = lazy(() => import('pages/AboutPage/AboutPage'));
+const RulesPage = lazy(() => import('pages/RulesPage/RulesPage'));
 const HelpPage = lazy(() => import('pages/HelpPage/HelpPage'));
 const CheckoutPage = lazy(() => import('pages/CheckoutPage/CheckoutPage'));
 const SuccessPage = lazy(() => import('pages/SuccessPage/SuccessPage'));
+const PolicyPage = lazy(() => import('pages/PolicyPage/PolicyPage'));
 
 const App = () => {
   return (
@@ -32,6 +36,8 @@ const App = () => {
             path="products/:productName"
             element={<ProductDetailsPage products={productsConfig} />}
           />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="rules" element={<RulesPage />} />
           <Route path="help" element={<HelpPage />} />
         </Route>
 
@@ -43,9 +49,17 @@ const App = () => {
           path="/order-info"
           element={<RestrictedRoutes component={SuccessPage} />}
         />
-        <Route path="/policy" element={<div>Policy</div>} />
+        <Route
+          path="/policy"
+          element={
+            <Suspense fallback={<PageLoader />}>
+              <PolicyPage />
+            </Suspense>
+          }
+        />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
+
       <Toaster position="top-center" reverseOrder={false} />
     </>
   );

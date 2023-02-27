@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import Hero from 'components/HeroSection/HeroSection';
-import Help from 'components/HelpSection/HelpSection';
-import Reviews from 'components/ReviewsSection/ReviewsSection';
 import ProductsSection from 'components/ProductsSection/ProductsSection';
+import Help from 'components/HelpSection/HelpSection';
+import AdvantagesSection from 'components/AdvantagesSection/AdvantagesSection';
+import Reviews from 'components/ReviewsSection/ReviewsSection';
 
 const HomePage = ({ products }) => {
   return (
@@ -10,6 +11,7 @@ const HomePage = ({ products }) => {
       <Hero />
       <ProductsSection products={products} />
       <Help />
+      <AdvantagesSection />
       <Reviews />
     </main>
   );
