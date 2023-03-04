@@ -1,5 +1,6 @@
 import Section from 'components/common/Section/Section';
 import Container from 'components/common/Container/Container';
+import Tagline from 'components/common/Tagline/Tagline';
 import sectionImg from 'images/about/mobile/item-1.jpg';
 import sectionImg2x from 'images/about/mobile/item-1@2x.jpg';
 import './AboutPage.scss';
@@ -12,11 +13,11 @@ const AboutPage = () => {
           <h2 className="section-title">Про нас</h2>
           <p className="text">
             <span className="bold">Markiz Company</span> виробництво та продаж
-            ортопедичних матраців. Наша спеціалізація – виробництво матраців на
-            основі традиційного пружинного блоку «Бонель», незалежного
-            пружинного блоку «Pocketspring», а також безпружинних матраців із
-            застосуванням у наповненні високоякісних матеріалів та високоміцних
-            оббивних тканин.
+            ортопедичних матраців Relax. Наша спеціалізація – виробництво
+            матраців на основі традиційного пружинного блоку «Бонель»,
+            незалежного пружинного блоку «Pocketspring», а також безпружинних
+            матраців із застосуванням у наповненні високоякісних матеріалів та
+            високоміцних оббивних тканин.
           </p>
           <div className="box-img">
             <img
@@ -37,10 +38,7 @@ const AboutPage = () => {
             вартістю.
           </p>
 
-          <p className="text tagline">
-            <span className="bold">Markiz Company</span> - ЗДОРОВИЙ СОН ЗА
-            ДОСТУПНОЮ ЦІНОЮ!
-          </p>
+          <Tagline />
         </Container>
       </Section>
     </main>

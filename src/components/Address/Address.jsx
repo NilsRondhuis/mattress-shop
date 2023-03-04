@@ -1,4 +1,4 @@
-import "./Address.scss";
+import './Address.scss';
 
 const Address = () => {
   return (
@@ -10,8 +10,13 @@ const Address = () => {
           </a>
         </li>
         <li className="item">
-          <a href="tel:+380681995425" className="tel-link">
-            068 199 54 25
+          <a href="tel:+380982200025" className="tel-link">
+            +380 (98) 220 00 25
+          </a>
+        </li>
+        <li className="item">
+          <a href="tel:+380932174935" className="tel-link">
+            +380 (93) 217 49 35
           </a>
         </li>
       </ul>

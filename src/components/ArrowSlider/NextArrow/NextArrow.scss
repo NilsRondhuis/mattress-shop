@@ -7,7 +7,9 @@
   align-items: center;
   padding: 10px;
   width: 40px;
+  color: var(--main-cl);
   background-color: var(--white-cl);
+  border: none;
   cursor: pointer;
   z-index: 5;
 }

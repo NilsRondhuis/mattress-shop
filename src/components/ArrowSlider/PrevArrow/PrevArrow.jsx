@@ -1,18 +1,16 @@
-import PropTypes from "prop-types";
-import { HiArrowNarrowLeft } from "react-icons/hi";
-import "./PrevArrow.scss";
+import PropTypes from 'prop-types';
+import { HiArrowNarrowLeft } from 'react-icons/hi';
+import './PrevArrow.scss';
 
-const PrevArrow = ({ className, style, onClick }) => {
+const PrevArrow = ({ onClick }) => {
   return (
-    <div className="slider-prev-arrow" onClick={onClick}>
+    <button className="slider-prev-arrow" onClick={onClick}>
       <HiArrowNarrowLeft />
-    </div>
+    </button>
   );
 };
 
 PrevArrow.propTypes = {
-  className: PropTypes.string,
-  style: PropTypes.object,
   onClick: PropTypes.func,
 };
 

@@ -1,18 +1,16 @@
-import PropTypes from "prop-types";
-import { HiArrowNarrowRight } from "react-icons/hi";
-import "./NextArrow.scss";
+import PropTypes from 'prop-types';
+import { HiArrowNarrowRight } from 'react-icons/hi';
+import './NextArrow.scss';
 
-const NextArrow = ({ className, style, onClick }) => {
+const NextArrow = ({ onClick }) => {
   return (
-    <div className="slider-next-arrow" onClick={onClick}>
+    <button className="slider-next-arrow" onClick={onClick}>
       <HiArrowNarrowRight />
-    </div>
+    </button>
   );
 };
 
 NextArrow.propTypes = {
-  className: PropTypes.string,
-  style: PropTypes.object,
   onClick: PropTypes.func,
 };
 

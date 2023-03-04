@@ -17,6 +17,7 @@ const ProductDetailsPage = lazy(() =>
 const AboutPage = lazy(() => import('pages/AboutPage/AboutPage'));
 const RulesPage = lazy(() => import('pages/RulesPage/RulesPage'));
 const HelpPage = lazy(() => import('pages/HelpPage/HelpPage'));
+const GuaranteePage = lazy(() => import('pages/GuaranteePage/GuaranteePage'));
 const CheckoutPage = lazy(() => import('pages/CheckoutPage/CheckoutPage'));
 const SuccessPage = lazy(() => import('pages/SuccessPage/SuccessPage'));
 const PolicyPage = lazy(() => import('pages/PolicyPage/PolicyPage'));
@@ -38,6 +39,7 @@ const App = () => {
           />
           <Route path="about" element={<AboutPage />} />
           <Route path="rules" element={<RulesPage />} />
+          <Route path="guarantee" element={<GuaranteePage />} />
           <Route path="help" element={<HelpPage />} />
         </Route>
 
@@ -57,6 +59,7 @@ const App = () => {
             </Suspense>
           }
         />
+
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
 

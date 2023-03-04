@@ -1,3 +1,4 @@
+import Tagline from 'components/common/Tagline/Tagline';
 import { imgHelpPage } from 'data/help-img-set';
 import './HelpArticle.scss';
 
@@ -17,7 +18,7 @@ const {
 const HelpArticle = () => {
   return (
     <div className="help-article">
-      <h2 className="section-title">Рекомендації щодо вибору матрацу</h2>
+      <h2 className="section-title">Рекомендації щодо вибору матраца</h2>
 
       <div className="box-img">
         <img
@@ -167,6 +168,8 @@ const HelpArticle = () => {
         зателефонувати нам, наші менеджери порадять та допоможуть з вибором
         відповідного матрацу.
       </p>
+
+      <Tagline />
     </div>
   );
 };
