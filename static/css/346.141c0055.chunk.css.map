@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/346.141c0055.chunk.css","mappings":"AAAA,SACE,eCDF,mBACE","sources":["components/common/Section/Section.scss","pages/GuaranteePage/GuaranteePage.scss"],"sourcesContent":[".section {\n  padding: 30px 0;\n}\n",".section-guarantee {\n  padding-bottom: 30px;\n}\n"],"names":[],"sourceRoot":""}
