@@ -1,0 +1,16 @@
+.contacts-list {
+  margin-bottom: 20px;
+
+  .item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  .tel-link {
+    font-size: 18px;
+    color: var(--white-cl);
+
+    &.black {
+      color: var(--main-cl);
+    }
+  }
+}

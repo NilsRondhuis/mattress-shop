@@ -1,3 +1,38 @@
 .section-guarantee {
   padding-bottom: 30px;
+
+  .law-title {
+    margin-bottom: 5px;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+
+  .law-subtitle {
+    margin-bottom: 20px;
+  }
+
+  .text {
+    margin-bottom: 20px;
+    text-align: justify;
+  }
+
+  .bold {
+    font-weight: 700;
+  }
+
+  .link-contacts {
+    font-weight: 700;
+    text-decoration: underline;
+    color: var(--main-cl);
+  }
+}
+
+.guarantee-list {
+  padding-left: 20px;
+  list-style-type: disc;
+  margin-bottom: 20px;
+
+  .item:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
