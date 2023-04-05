@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectCalculateAmount } from 'redux/cart/selectors';
+import { checkAtOwnSize } from 'services/checkAtOwnSize';
 import CheckoutProductsList from 'components/CheckoutProductsList/CheckoutProductsList';
 import CartAmount from 'components/CartAmount/CartAmount';
 import BtnLink from 'components/common/BtnLink/BtnLink';
@@ -12,6 +13,8 @@ import './CartMenu.scss';
 const CartMenu = ({ isOpen, onToggle, productsCart }) => {
   const location = useLocation();
   const amount = useSelector(selectCalculateAmount);
+
+  console.log(productsCart);
 
   return (
     <div className={isOpen ? 'cart-menu' : 'cart-menu is-hidden'}>
@@ -25,12 +28,14 @@ const CartMenu = ({ isOpen, onToggle, productsCart }) => {
             productsCart={productsCart}
             onToggle={onToggle}
           />
-          <CartAmount
-            type="cart-amount"
-            text="Всього разом"
-            cost={amount.cost}
-            sale={amount.sale}
-          />
+          {!checkAtOwnSize(productsCart.size) && (
+            <CartAmount
+              type="cart-amount"
+              text="Всього разом"
+              cost={amount.cost}
+              sale={amount.sale}
+            />
+          )}
           <BtnLink
             to="/checkout"
             type="cart-order-btn"

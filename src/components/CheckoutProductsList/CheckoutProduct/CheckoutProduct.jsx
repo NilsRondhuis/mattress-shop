@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom';
 import { deleteProductCart } from 'redux/cart/slice';
+import { checkAtOwnSize } from 'services/checkAtOwnSize';
 import Counter from '../Counter/Counter';
 import { MdDeleteForever } from 'react-icons/md';
 import './CheckoutProduct.scss';
@@ -16,10 +17,12 @@ const CheckoutProduct = ({
   newPrice,
   onToggle,
   quantity,
+  sale,
 }) => {
   const location = useLocation();
   const dispatch = useDispatch();
   const checkingOnCheckoutPage = location.pathname.includes('checkout');
+  const sizeText = checkAtOwnSize(size) ? 'розмір під замовлення' : size;
 
   const handleDelete = productId => {
     dispatch(deleteProductCart(productId));
@@ -42,14 +45,20 @@ const CheckoutProduct = ({
             className="cart-product-title"
             onClick={onToggle}
           >
-            Ортопедичний матрац {name} <span className="size">{size} см</span>
+            Ортопедичний матрац {name} <span className="size">{sizeText}</span>
           </Link>
-          <span className="old-price">{oldPrice} грн.</span>
-          <span className="new-price">{newPrice} грн.</span>
+
+          {!checkAtOwnSize(size) && (
+            <div>
+              {sale && <span className="old-price">{oldPrice} грн.</span>}
+              <span className="new-price">{newPrice} грн.</span>
+            </div>
+          )}
         </div>
 
-        <Counter id={id} quantity={quantity} />
+        {!checkAtOwnSize(size) && <Counter id={id} quantity={quantity} />}
       </div>
+
       {!checkingOnCheckoutPage && (
         <button
           type="button"
@@ -70,8 +79,8 @@ CheckoutProduct.propTypes = {
   img1x: PropTypes.string.isRequired,
   img2x: PropTypes.string.isRequired,
   size: PropTypes.string.isRequired,
-  oldPrice: PropTypes.number.isRequired,
-  newPrice: PropTypes.number.isRequired,
+  oldPrice: PropTypes.number,
+  newPrice: PropTypes.number,
   onToggle: PropTypes.func,
   quantity: PropTypes.number.isRequired,
 };

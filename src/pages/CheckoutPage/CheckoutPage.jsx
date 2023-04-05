@@ -8,6 +8,7 @@ import {
   selectOrderId,
 } from 'redux/cart/selectors';
 import { submitInfo } from 'services/fetchTelegram';
+import { checkAtOwnSize } from 'services/checkAtOwnSize';
 import Logo from 'components/common/Logo/Logo';
 import Section from 'components/common/Section/Section';
 import Container from 'components/common/Container/Container';
@@ -33,7 +34,9 @@ const CheckoutPage = () => {
     message += productsCart
       .map(
         item =>
-          `<b>Товар: </b> ${item.name} ${item.size} (К-сть: ${item.quantity})\n`
+          `<b>Товар: </b> ${item.name} ${
+            checkAtOwnSize(item.size) ? 'розмір під замовлення' : item.size
+          } (К-сть: ${item.quantity})\n`
       )
       .join('');
     message += `<b>Коментар: </b>${values.comment}`;

@@ -1,6 +1,7 @@
 .list-products {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 
   .item {
     flex-basis: calc((100% - 2 * 0px) / 2);
@@ -10,4 +11,9 @@
       border-right: 1px solid var(--design-line-cl);
     }
   }
+}
+
+.section-products-container {
+  display: flex;
+  justify-content: center;
 }

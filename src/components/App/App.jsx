@@ -7,6 +7,7 @@ import ScrollToTop from 'components/common/ScrollToTop/ScrollToTop';
 import PageLoader from 'components/common/PageLoader/PageLoader';
 import UpBtn from 'components/UpBtn/UpBtn';
 import productsConfig from 'data/products-config';
+import Slider from 'react-slick';
 
 const HomePage = lazy(() => import('pages/HomePage/HomePage'));
 const ProductsCategoryPage = lazy(() =>

@@ -14,9 +14,10 @@ const ProductCard = ({ name, img1x, img2x, oldPrice, newPrice, sale }) => {
           loading="lazy"
         />
       </div>
+
       <div>
         <h3 className="product-name">{name}</h3>
-        <p className="old-price">{oldPrice} грн.</p>
+        {sale && <p className="old-price">{oldPrice} грн.</p>}
         <p className="new-price">{newPrice} грн.</p>
       </div>
       {sale && <span className="product-sale">sale</span>}

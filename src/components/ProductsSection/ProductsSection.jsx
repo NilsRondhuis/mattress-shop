@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import Section from 'components/common/Section/Section';
 import Container from 'components/common/Container/Container';
 import ProductCard from 'components/ProductCard/ProductsCard';
+import BtnLink from 'components/common/BtnLink/BtnLink';
+import FlexContainer from 'components/common/FlexContainer/FlexContainer';
 import './ProductsSection.scss';
 
 const ProductsSection = ({ products }) => {
@@ -11,23 +13,38 @@ const ProductsSection = ({ products }) => {
       <Container>
         <h2 className="visually-hidden">Матраци</h2>
         <ul className="list-products">
-          {products.map(
-            ({ id, name, img1x, img2x, oldPrice, newPrice, sale }) => (
-              <li key={id} className="item">
-                <Link to={`products/${name}`}>
-                  <ProductCard
-                    name={name}
-                    img1x={img1x}
-                    img2x={img2x}
-                    oldPrice={oldPrice}
-                    newPrice={newPrice}
-                    sale={sale}
-                  />
-                </Link>
-              </li>
-            )
-          )}
+          {products
+            .slice(0, 4)
+            .map(
+              ({
+                id,
+                name,
+                img1x,
+                img2x,
+                imagesList,
+                oldPrice,
+                newPrice,
+                sale,
+              }) => (
+                <li key={id} className="item">
+                  <Link to={`products/${name}`}>
+                    <ProductCard
+                      name={name}
+                      img1x={img1x}
+                      img2x={img2x}
+                      oldPrice={oldPrice}
+                      newPrice={newPrice}
+                      sale={sale}
+                      imagesList={imagesList}
+                    />
+                  </Link>
+                </li>
+              )
+            )}
         </ul>
+        <FlexContainer type="section-products-container">
+          <BtnLink to="/products" text="Більше товарів" />
+        </FlexContainer>
       </Container>
     </Section>
   );

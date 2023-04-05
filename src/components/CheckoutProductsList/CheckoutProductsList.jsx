@@ -7,7 +7,17 @@ const CheckoutProductsList = ({ productsCart, onToggle }) => {
     <>
       <ul className="cart-product-list">
         {productsCart.map(
-          ({ id, name, img1x, img2x, size, oldPrice, newPrice, quantity }) => (
+          ({
+            id,
+            name,
+            img1x,
+            img2x,
+            size,
+            sale,
+            oldPrice,
+            newPrice,
+            quantity,
+          }) => (
             <li key={id} className="item">
               <CheckoutProduct
                 id={id}
@@ -19,6 +29,7 @@ const CheckoutProductsList = ({ productsCart, onToggle }) => {
                 newPrice={newPrice}
                 onToggle={onToggle}
                 quantity={quantity}
+                sale={sale}
               />
             </li>
           )

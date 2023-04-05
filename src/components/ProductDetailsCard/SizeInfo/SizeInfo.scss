@@ -1,0 +1,19 @@
+.size-info {
+  margin: 20px 0 20px 0;
+  padding: 10px;
+  border: 1px solid var(--main-cl);
+  border-radius: var(--border-radius-shared);
+
+  .subhead,
+  .bold {
+    font-weight: 700;
+  }
+
+  .subhead {
+    margin-bottom: 10px;
+  }
+
+  .text {
+    text-align: justify;
+  }
+}

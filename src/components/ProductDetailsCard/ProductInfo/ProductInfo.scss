@@ -37,6 +37,7 @@
 
       .heading {
         font-weight: 700;
+        white-space: nowrap;
       }
 
       .design-line {
@@ -44,6 +45,10 @@
         flex-grow: 1;
         border: 1px solid var(--design-line-cl);
         opacity: 0.5;
+      }
+
+      .sub-heading {
+        white-space: nowrap;
       }
     }
   }

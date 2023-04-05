@@ -9,6 +9,9 @@ export const selectCalculateAmount = state => {
   }, 0);
 
   const sale = productsCart.reduce((acc, item) => {
+    if (!item.sale) {
+      return acc;
+    }
     acc += item.oldPrice - item.newPrice;
     return acc;
   }, 0);

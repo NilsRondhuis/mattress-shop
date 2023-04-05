@@ -1,8 +1,8 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
-import "./ProductInfo.scss";
+import { useState } from 'react';
+import PropTypes from 'prop-types';
+import './ProductInfo.scss';
 
-const options = ["Опис", "Характеристики"];
+const options = ['Опис', 'Характеристики'];
 
 const ProductInfo = ({ product }) => {
   const [productInfo, setProductInfo] = useState(options[0]);
@@ -28,7 +28,7 @@ const ProductInfo = ({ product }) => {
     layer3,
   } = product;
 
-  const helperYesOrNot = (item) => (item ? "Так" : "Ні");
+  const helperYesOrNot = item => (item ? 'Так' : 'Ні');
 
   return (
     <div className="product-info">
@@ -38,7 +38,7 @@ const ProductInfo = ({ product }) => {
             key={idx}
             type="button"
             className={
-              productInfo === option ? "option-btn active" : "option-btn"
+              productInfo === option ? 'option-btn active' : 'option-btn'
             }
             onClick={() => setProductInfo(option)}
           >
@@ -60,77 +60,77 @@ const ProductInfo = ({ product }) => {
             <li className="item">
               <p className="heading">Гарантія на виріб</p>
               <span className="design-line"></span>
-              <p>{guarantee} місяців</p>
+              <p className="sub-heading">{guarantee} місяців</p>
             </li>
             <li className="item">
               <p className="heading">Жорсткість сторін матраца</p>
               <span className="design-line"></span>
-              <p>{stiffnessSides}</p>
+              <p className="sub-heading">{stiffnessSides}</p>
             </li>
             <li className="item">
               <p className="heading">Жорсткість</p>
               <span className="design-line"></span>
-              <p>{stiffness}</p>
+              <p className="sub-heading">{stiffness}</p>
             </li>
             <li className="item">
               <p className="heading">Навантаження на спальне місце</p>
               <span className="design-line"></span>
-              <p>{load}</p>
+              <p className="sub-heading">{load}</p>
             </li>
             <li className="item">
               <p className="heading">Тип матраца</p>
               <span className="design-line"></span>
-              <p>{type}</p>
+              <p className="sub-heading">{type}</p>
             </li>
             <li className="item">
               <p className="heading">Тип пружинного блоку</p>
               <span className="design-line"></span>
-              <p>{typeSpring}</p>
+              <p className="sub-heading">{typeSpring}</p>
             </li>
             <li className="item">
               <p className="heading">Опція зима/літо</p>
               <span className="design-line"></span>
-              <p>{helperYesOrNot(option)}</p>
+              <p className="sub-heading">{helperYesOrNot(option)}</p>
             </li>
             <li className="item">
               <p className="heading">Чохол на блискавці</p>
               <span className="design-line"></span>
-              <p>{helperYesOrNot(cover)}</p>
+              <p className="sub-heading">{helperYesOrNot(cover)}</p>
             </li>
             <li className="item">
               <p className="heading">Висота моделі матраца</p>
               <span className="design-line"></span>
-              <p>{height}</p>
+              <p className="sub-heading">{height}</p>
             </li>
             <li className="item">
               <p className="heading">Кокос</p>
               <span className="design-line"></span>
-              <p>{helperYesOrNot(coconut)}</p>
+              <p className="sub-heading">{helperYesOrNot(coconut)}</p>
             </li>
             <li className="item">
               <p className="heading">Латекс</p>
               <span className="design-line"></span>
-              <p>{helperYesOrNot(latex)}</p>
+              <p className="sub-heading">{helperYesOrNot(latex)}</p>
             </li>
             <li className="item">
               <p className="heading">Матеріал чохла</p>
               <span className="design-line"></span>
-              <p>{materialCover}</p>
+              <p className="sub-heading">{materialCover}</p>
             </li>
             <li className="item">
               <p className="heading">Шар 1</p>
               <span className="design-line"></span>
-              <p>{layer1}</p>
+              <p className="sub-heading">{layer1}</p>
             </li>
             <li className="item">
               <p className="heading">Шар 2</p>
               <span className="design-line"></span>
-              <p>{helperYesOrNot(layer2)}</p>
+              <p className="sub-heading">{helperYesOrNot(layer2)}</p>
             </li>
             <li className="item">
               <p className="heading">Шар 3</p>
               <span className="design-line"></span>
-              <p>{helperYesOrNot(layer3)}</p>
+              <p className="sub-heading">{helperYesOrNot(layer3)}</p>
             </li>
           </ul>
         </div>

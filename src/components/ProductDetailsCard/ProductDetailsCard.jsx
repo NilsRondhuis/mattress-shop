@@ -1,14 +1,16 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { nanoid } from 'nanoid';
 import { toast } from 'react-hot-toast';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectProductInCart } from 'redux/cart/selectors';
 import { addProductToCart } from 'redux/cart/slice';
+import { checkAtOwnSize } from 'services/checkAtOwnSize';
 import SizeOption from './SizeOption/SizeOption';
 import DeliveryInfo from './DeliveryInfo/DeliveryInfo';
 import AdditionalInfo from './AdditionalInfo/AdditionalInfo';
 import ProductInfo from './ProductInfo/ProductInfo';
+import SizeInfo from './SizeInfo/SizeInfo';
 import { BsFillCartCheckFill } from 'react-icons/bs';
 import { FaShoppingCart } from 'react-icons/fa';
 import './ProductDetailsCard.scss';
@@ -16,11 +18,18 @@ import './ProductDetailsCard.scss';
 const ProductDetailsCard = ({ product }) => {
   const dispatch = useDispatch();
   const productsCart = useSelector(selectProductInCart);
+  const [newPrice, setNewPrice] = useState(product.newPrice);
+  const [oldPrice, setOldPrice] = useState(product.oldPrice);
   const [size, setSize] = useState(product.sizes[0]);
   const chekProductInCart = productsCart.some(
     productCart =>
       productCart.size === size && productCart.name === product.name
   );
+
+  useEffect(() => {
+    setNewPrice(product.newPriceList[size]);
+    setOldPrice(product.oldPriceList[size]);
+  }, [size, product.newPriceList, product.oldPriceList]);
 
   const onUpdateSize = newSize => {
     setSize(newSize);
@@ -31,6 +40,10 @@ const ProductDetailsCard = ({ product }) => {
       ...product,
       id: nanoid(),
       size,
+      newPrice,
+      oldPrice,
+      initialOldPrice: oldPrice,
+      initialNewPrice: newPrice,
     };
     dispatch(addProductToCart(productToCart));
     toast.success('Товар у кошику 😊');
@@ -56,8 +69,13 @@ const ProductDetailsCard = ({ product }) => {
         onUpdateSize={onUpdateSize}
       />
 
-      <span className="new-price">{product.newPrice} грн.</span>
-      <span className="old-price">{product.oldPrice} грн.</span>
+      {!checkAtOwnSize(size) && (
+        <div>
+          <span className="new-price">{newPrice} грн.</span>
+          {product.sale && <span className="old-price">{oldPrice} грн.</span>}
+        </div>
+      )}
+
       <button
         type="button"
         className="btn-add-cart"
@@ -77,6 +95,7 @@ const ProductDetailsCard = ({ product }) => {
         )}
       </button>
 
+      <SizeInfo />
       <DeliveryInfo />
       <AdditionalInfo />
       <ProductInfo product={product} />

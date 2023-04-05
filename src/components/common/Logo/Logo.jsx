@@ -9,25 +9,25 @@ import logoMenu2x from 'images/logo/mobile/logo-menu@2x.jpg';
 import './Logo.scss';
 
 const checkImgType = place => {
-  const images = {
+  const img1x = {
     img: null,
     imgSet: null,
   };
 
   if (place === 'header') {
-    images.img = logoLight;
-    images.imgSet = `${logoLight} 1x, ${logoLight2x} 2x`;
+    img1x.img = logoLight;
+    img1x.imgSet = `${logoLight} 1x, ${logoLight2x} 2x`;
   }
   if (place === 'footer') {
-    images.img = logoDark;
-    images.imgSet = `${logoDark} 1x, ${logoDark2x} 2x`;
+    img1x.img = logoDark;
+    img1x.imgSet = `${logoDark} 1x, ${logoDark2x} 2x`;
   }
   if (place === 'other') {
-    images.img = logoMenu;
-    images.imgSet = `${logoMenu} 1x, ${logoMenu2x} 2x`;
+    img1x.img = logoMenu;
+    img1x.imgSet = `${logoMenu} 1x, ${logoMenu2x} 2x`;
   }
 
-  return images;
+  return img1x;
 };
 
 const Logo = ({ place, type }) => {

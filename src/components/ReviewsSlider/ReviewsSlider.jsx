@@ -10,6 +10,7 @@ const ReviewsSlider = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: true,
+    arrows: false,
   };
   return (
     <div style={{ padding: '20px 0', overflow: 'hidden' }}>
