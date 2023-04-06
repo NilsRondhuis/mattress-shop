@@ -4,7 +4,11 @@ import './PrevArrow.scss';
 
 const PrevArrow = ({ onClick }) => {
   return (
-    <button className="slider-prev-arrow" onClick={onClick}>
+    <button
+      className="slider-prev-arrow"
+      aria-label="prev-arrow"
+      onClick={onClick}
+    >
       <HiArrowNarrowLeft />
     </button>
   );

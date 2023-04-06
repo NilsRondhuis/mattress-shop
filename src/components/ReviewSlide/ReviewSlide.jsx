@@ -9,7 +9,13 @@ const ReviewSlide = ({ img, img2x, name, text }) => {
       <div className="box">
         <FlexContainer type="review-flex-container">
           <div className="img-box">
-            <img srcSet={`${img} 1x, ${img2x} 2x`} src={img} alt={name} />
+            <img
+              srcSet={`${img} 1x, ${img2x} 2x`}
+              src={img}
+              alt={name}
+              width="60"
+              height="60"
+            />
           </div>
           <p className="author-name">{name}</p>
         </FlexContainer>

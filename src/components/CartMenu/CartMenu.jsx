@@ -14,8 +14,6 @@ const CartMenu = ({ isOpen, onToggle, productsCart }) => {
   const location = useLocation();
   const amount = useSelector(selectCalculateAmount);
 
-  console.log(productsCart);
-
   return (
     <div className={isOpen ? 'cart-menu' : 'cart-menu is-hidden'}>
       <div className="cart-header">

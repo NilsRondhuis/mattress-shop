@@ -4,7 +4,11 @@ import './NextArrow.scss';
 
 const NextArrow = ({ onClick }) => {
   return (
-    <button className="slider-next-arrow" onClick={onClick}>
+    <button
+      className="slider-next-arrow"
+      aria-label="next-arrow"
+      onClick={onClick}
+    >
       <HiArrowNarrowRight />
     </button>
   );

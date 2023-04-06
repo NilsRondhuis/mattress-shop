@@ -51,4 +51,13 @@
       color: var(--delete-btn-cl);
     }
   }
+
+  .text-attention {
+    font-size: 14px;
+
+    .bold {
+      font-weight: 700;
+      color: var(--accent-cl);
+    }
+  }
 }

@@ -4,7 +4,12 @@ import './BtnMenu.scss';
 
 const BtnMenu = ({ onToggle }) => {
   return (
-    <button type="button" className="menu-btn" onClick={onToggle}>
+    <button
+      type="button"
+      className="menu-btn"
+      aria-label="menu"
+      onClick={onToggle}
+    >
       <TfiMenu className="menu" color="#584d5d" />
     </button>
   );

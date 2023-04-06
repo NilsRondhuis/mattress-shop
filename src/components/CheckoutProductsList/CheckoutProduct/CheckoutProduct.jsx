@@ -54,6 +54,16 @@ const CheckoutProduct = ({
               <span className="new-price">{newPrice} грн.</span>
             </div>
           )}
+
+          {checkAtOwnSize(size) && (
+            <div>
+              <p className="text-attention">
+                <span className="bold">Зерніть увагу!</span> При замовленні
+                матрацу з власним розміром, ціна за товар буде визначена після
+                надання інформації про розміри менеджеру.
+              </p>
+            </div>
+          )}
         </div>
 
         {!checkAtOwnSize(size) && <Counter id={id} quantity={quantity} />}

@@ -5,7 +5,12 @@ import './Cart.scss';
 const Cart = ({ onToggleCart, quantity }) => {
   return (
     <div className="cart-container">
-      <button type="button" className="cart" onClick={onToggleCart}>
+      <button
+        type="button"
+        className="cart"
+        aria-label="cart"
+        onClick={onToggleCart}
+      >
         <FaShoppingCart className="icon-cart" color="#584d5d" />
       </button>
       {quantity > 0 && <span className="cart-count">{quantity}</span>}
