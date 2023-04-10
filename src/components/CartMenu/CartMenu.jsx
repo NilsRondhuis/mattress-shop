@@ -35,6 +35,7 @@ const CartMenu = ({ isOpen, onToggle, productsCart }) => {
             />
           )}
           <BtnLink
+            id="fb-cart-order-btn"
             to="/checkout"
             type="cart-order-btn"
             text="Оформити замовлення"

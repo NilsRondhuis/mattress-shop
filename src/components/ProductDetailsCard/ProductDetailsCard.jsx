@@ -77,6 +77,7 @@ const ProductDetailsCard = ({ product }) => {
       )}
 
       <button
+        id="fb-add-to-cart"
         type="button"
         className="btn-add-cart"
         onClick={() => addToCart(product.id)}
