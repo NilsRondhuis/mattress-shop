@@ -45,6 +45,8 @@ const ProductDetailsCard = ({ product }) => {
       initialOldPrice: oldPrice,
       initialNewPrice: newPrice,
     };
+    window.dataLayer.push({ event: 'addToCart' });
+    console.log(window.dataLayer);
     dispatch(addProductToCart(productToCart));
     toast.success('Товар у кошику 😊');
   };
@@ -77,7 +79,6 @@ const ProductDetailsCard = ({ product }) => {
       )}
 
       <button
-        id="fb-add-to-cart"
         type="button"
         className="btn-add-cart"
         onClick={() => addToCart(product.id)}

@@ -36,13 +36,15 @@ const CheckoutPage = () => {
         item =>
           `<b>Товар: </b> ${item.name} ${
             checkAtOwnSize(item.size) ? 'розмір під замовлення' : item.size
-          } (К-сть: ${item.quantity})\n`
+          } (К-сть: ${item.quantity})\n<b>Ціна: </b> ${item.newPrice} грн.\n
+          `
       )
       .join('');
     message += `<b>Коментар: </b>${values.comment}`;
 
     try {
       await submitInfo(message);
+      window.dataLayer.push({ event: 'submitContacts', price: amount.cost });
       setIsSuccessSubmit(true);
     } catch {
       toast.error(
