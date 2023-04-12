@@ -46,7 +46,6 @@ const ProductDetailsCard = ({ product }) => {
       initialNewPrice: newPrice,
     };
     window.dataLayer.push({ event: 'addToCart' });
-    console.log(window.dataLayer);
     dispatch(addProductToCart(productToCart));
     toast.success('Товар у кошику 😊');
   };

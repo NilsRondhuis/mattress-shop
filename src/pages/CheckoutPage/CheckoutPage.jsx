@@ -39,7 +39,8 @@ const CheckoutPage = () => {
           } (К-сть: ${item.quantity})\n<b>Ціна: </b> ${item.newPrice} грн.\n
           `
       )
-      .join('');
+      .join('')
+      .replace(/\n\s+/g, '\n');
     message += `<b>Коментар: </b>${values.comment}`;
 
     try {

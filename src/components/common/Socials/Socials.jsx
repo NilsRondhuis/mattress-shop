@@ -9,7 +9,7 @@ const Socials = ({ title, typeList, colorIcon }) => {
       <ul className={typeList ? `${typeList} list-social` : 'list-social'}>
         <li className="item">
           <a
-            href="https://www.facebook.com/pages/%D0%A0%D0%B5%D0%BB%D0%B0%D0%BA%D1%81/277590729114064"
+            href="https://www.facebook.com/markizmattress"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="facebook"
@@ -25,6 +25,8 @@ const Socials = ({ title, typeList, colorIcon }) => {
 
 Socials.propTypes = {
   title: PropTypes.string,
+  typeList: PropTypes.string,
+  colorOption: PropTypes.string,
 };
 
 export default Socials;
