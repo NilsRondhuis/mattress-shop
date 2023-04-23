@@ -15,11 +15,15 @@ import { BsFillCartCheckFill } from 'react-icons/bs';
 import { FaShoppingCart } from 'react-icons/fa';
 import './ProductDetailsCard.scss';
 
+import { createOldPrice } from 'services/createOldPrice';
+
 const ProductDetailsCard = ({ product }) => {
   const dispatch = useDispatch();
   const productsCart = useSelector(selectProductInCart);
   const [newPrice, setNewPrice] = useState(product.newPrice);
-  const [oldPrice, setOldPrice] = useState(product.oldPrice);
+  const [oldPrice, setOldPrice] = useState(
+    createOldPrice(20, product.newPrice)
+  );
   const [size, setSize] = useState(product.sizes[0]);
   const chekProductInCart = productsCart.some(
     productCart =>
@@ -28,7 +32,7 @@ const ProductDetailsCard = ({ product }) => {
 
   useEffect(() => {
     setNewPrice(product.newPriceList[size]);
-    setOldPrice(product.oldPriceList[size]);
+    setOldPrice(createOldPrice(20, product.newPriceList[size]));
   }, [size, product.newPriceList, product.oldPriceList]);
 
   const onUpdateSize = newSize => {

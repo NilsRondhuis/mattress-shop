@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { createOldPrice } from 'services/createOldPrice';
 import Section from 'components/common/Section/Section';
 import Container from 'components/common/Container/Container';
 import ProductCard from 'components/ProductCard/ProductsCard';
@@ -15,32 +16,21 @@ const ProductsSection = ({ products }) => {
         <ul className="list-products">
           {products
             .slice(0, 4)
-            .map(
-              ({
-                id,
-                name,
-                img1x,
-                img2x,
-                imagesList,
-                oldPrice,
-                newPrice,
-                sale,
-              }) => (
-                <li key={id} className="item">
-                  <Link to={`products/${name}`}>
-                    <ProductCard
-                      name={name}
-                      img1x={img1x}
-                      img2x={img2x}
-                      oldPrice={oldPrice}
-                      newPrice={newPrice}
-                      sale={sale}
-                      imagesList={imagesList}
-                    />
-                  </Link>
-                </li>
-              )
-            )}
+            .map(({ id, name, img1x, img2x, imagesList, newPrice, sale }) => (
+              <li key={id} className="item">
+                <Link to={`products/${name}`}>
+                  <ProductCard
+                    name={name}
+                    img1x={img1x}
+                    img2x={img2x}
+                    oldPrice={createOldPrice(20, newPrice)}
+                    newPrice={newPrice}
+                    sale={sale}
+                    imagesList={imagesList}
+                  />
+                </Link>
+              </li>
+            ))}
         </ul>
         <FlexContainer type="section-products-container">
           <BtnLink to="/products" text="Більше товарів" />
