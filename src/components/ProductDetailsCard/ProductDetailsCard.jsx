@@ -33,7 +33,8 @@ const ProductDetailsCard = ({ product }) => {
   useEffect(() => {
     setNewPrice(product.newPriceList[size]);
     setOldPrice(createOldPrice(20, product.newPriceList[size]));
-  }, [size, product.newPriceList, product.oldPriceList]);
+    window.dataLayer.push({ event: 'sawProduct', name: product.name });
+  }, [size, product.newPriceList, product.oldPriceList, product.name]);
 
   const onUpdateSize = newSize => {
     setSize(newSize);
