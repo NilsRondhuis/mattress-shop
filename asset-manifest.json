@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/mattress-shop/static/css/main.c298b771.css",
-    "main.js": "/mattress-shop/static/js/main.2c39f886.js",
-    "static/css/776.a3d6c179.chunk.css": "/mattress-shop/static/css/776.a3d6c179.chunk.css",
-    "static/js/776.52d044e4.chunk.js": "/mattress-shop/static/js/776.52d044e4.chunk.js",
+    "main.js": "/mattress-shop/static/js/main.73569d88.js",
+    "static/css/776.0dd4efca.chunk.css": "/mattress-shop/static/css/776.0dd4efca.chunk.css",
+    "static/js/776.d5445cd1.chunk.js": "/mattress-shop/static/js/776.d5445cd1.chunk.js",
     "static/css/631.4cd02dd8.chunk.css": "/mattress-shop/static/css/631.4cd02dd8.chunk.css",
     "static/js/631.f30a28e7.chunk.js": "/mattress-shop/static/js/631.f30a28e7.chunk.js",
     "static/css/122.4f586532.chunk.css": "/mattress-shop/static/css/122.4f586532.chunk.css",
@@ -42,6 +42,7 @@
     "static/media/item-1@2x.jpg": "/mattress-shop/static/media/item-1@2x.5b85ebad6b2b25f6e178.jpg",
     "static/media/intro@2x.jpg": "/mattress-shop/static/media/intro@2x.335a9e47b98a82366c8c.jpg",
     "static/media/item-2.jpg": "/mattress-shop/static/media/item-2.46d2d64a72d795894434.jpg",
+    "static/media/main-title@2x.png": "/mattress-shop/static/media/main-title@2x.4035251821ac2f3bfec4.png",
     "static/media/item-4.jpg": "/mattress-shop/static/media/item-4.c348a4a77a6932275d36.jpg",
     "static/media/item-3.jpg": "/mattress-shop/static/media/item-3.9dd931756b3aefdffe8c.jpg",
     "static/media/item-1.jpg": "/mattress-shop/static/media/item-1.6937b80eb43dc551c710.jpg",
@@ -59,9 +60,9 @@
     "static/media/slick.ttf": "/mattress-shop/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/mattress-shop/static/media/slick.295183786cd8a1389865.woff",
     "main.c298b771.css.map": "/mattress-shop/static/css/main.c298b771.css.map",
-    "main.2c39f886.js.map": "/mattress-shop/static/js/main.2c39f886.js.map",
-    "776.a3d6c179.chunk.css.map": "/mattress-shop/static/css/776.a3d6c179.chunk.css.map",
-    "776.52d044e4.chunk.js.map": "/mattress-shop/static/js/776.52d044e4.chunk.js.map",
+    "main.73569d88.js.map": "/mattress-shop/static/js/main.73569d88.js.map",
+    "776.0dd4efca.chunk.css.map": "/mattress-shop/static/css/776.0dd4efca.chunk.css.map",
+    "776.d5445cd1.chunk.js.map": "/mattress-shop/static/js/776.d5445cd1.chunk.js.map",
     "631.4cd02dd8.chunk.css.map": "/mattress-shop/static/css/631.4cd02dd8.chunk.css.map",
     "631.f30a28e7.chunk.js.map": "/mattress-shop/static/js/631.f30a28e7.chunk.js.map",
     "122.4f586532.chunk.css.map": "/mattress-shop/static/css/122.4f586532.chunk.css.map",
@@ -89,6 +90,6 @@
   },
   "entrypoints": [
     "static/css/main.c298b771.css",
-    "static/js/main.2c39f886.js"
+    "static/js/main.73569d88.js"
   ]
 }
