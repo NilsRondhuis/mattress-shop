@@ -2,8 +2,8 @@ import Section from 'components/common/Section/Section';
 import Container from 'components/common/Container/Container';
 import HeroSlider from 'components/HeroSlider/HeroSlider';
 import FlexContainer from 'components/common/FlexContainer/FlexContainer';
-import mainTitle from 'images/main-title/mobile/main-title.jpg';
-import mainTitle2x from 'images/main-title/mobile/main-title@2x.jpg';
+import mainTitle from 'images/main-title/mobile/main-title.png';
+import mainTitle2x from 'images/main-title/mobile/main-title@2x.png';
 import './HeroSection.scss';
 
 const Hero = () => {
